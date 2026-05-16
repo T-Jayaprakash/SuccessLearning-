@@ -1,0 +1,38 @@
+@import 'variables';
+
+.gallery-page {
+  &__container { max-width: $container-max; margin: 0 auto; padding: 0 $container-padding; }
+
+  &__filters { display: flex; flex-wrap: wrap; gap: $space-2; justify-content: center; margin-bottom: $space-7; }
+  &__filter {
+    padding: $space-2 $space-5; border: 1px solid $color-border; border-radius: $radius-full;
+    font-family: $font-primary; font-size: $font-size-sm; font-weight: $font-weight-medium;
+    color: $color-text-light; background: $color-white; cursor: pointer;
+    transition: all $transition-fast;
+    &:hover { border-color: $color-primary; color: $color-primary; }
+    &.active { background: $color-primary; color: $color-white; border-color: $color-primary; }
+  }
+
+  &__grid {
+    display: grid; grid-template-columns: 1fr; gap: $space-4;
+    @media (min-width: $bp-sm) { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: $bp-lg) { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  &__item {
+    position: relative; border-radius: $radius-lg; overflow: hidden; aspect-ratio: 4/3;
+    cursor: pointer;
+    img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    &:hover img { transform: scale(1.08); }
+    &:hover .gallery-page__overlay { opacity: 1; }
+  }
+
+  &__overlay {
+    position: absolute; inset: 0; background: rgba($color-primary-dark, 0.5);
+    display: flex; align-items: flex-end; justify-content: center; padding: $space-4;
+    opacity: 0; transition: opacity $transition-base;
+    span { color: $color-white; font-family: $font-primary; font-size: $font-size-sm; font-weight: $font-weight-medium; }
+  }
+
+  &__empty { text-align: center; padding: $space-8; color: $color-text-light; }
+}

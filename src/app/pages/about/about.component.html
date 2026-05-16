@@ -1,0 +1,100 @@
+<app-page-hero
+  title="About Success Learning"
+  subtitle="Trichy's trusted coaching centre for international exams and foreign languages."
+  [breadcrumbs]="[{label: 'About Us'}]">
+</app-page-hero>
+
+<!-- Introduction -->
+<section class="section about-intro" id="about-intro">
+  <div class="about-intro__container">
+    <div class="about-intro__image scroll-reveal-left">
+      <img src="assets/images/about-pic.jpg" alt="Success Learning coaching centre in Thillai Nagar, Trichy" loading="lazy" width="520" height="380">
+    </div>
+    <div class="about-intro__content scroll-reveal-right">
+      <span class="section-label">Who We Are</span>
+      <h2 class="section-title">Your Learning Partner in Trichy</h2>
+      <div class="gold-line"></div>
+      <p>Success Learning was established with a clear purpose — to provide <strong>quality, affordable language and exam coaching</strong> to students and professionals in Trichy.</p>
+      <p>Located in <strong>Thillai Nagar</strong>, we are a single-centre institute that believes in depth over breadth. Instead of expanding to multiple locations and diluting quality, we focus all our energy on making every student who walks through our doors truly prepared.</p>
+      <p>Our trainers are experienced professionals who understand the nuances of each exam and language. We keep our batch sizes small because we know that personal attention makes the real difference in learning outcomes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="section section-alt about-vm" id="about-vision-mission">
+  <div class="about-vm__container">
+    <div class="about-vm__card scroll-reveal stagger-1">
+      <div class="about-vm__icon"><i class="bi bi-eye"></i></div>
+      <h3>Our Vision</h3>
+      <p>To be Trichy's most trusted name in language education and international exam preparation — known for genuine results, not marketing claims.</p>
+    </div>
+    <div class="about-vm__card scroll-reveal stagger-2">
+      <div class="about-vm__icon"><i class="bi bi-flag"></i></div>
+      <h3>Our Mission</h3>
+      <p>To empower every student with the language skills and exam confidence they need to achieve their academic, professional, and personal goals — through structured, personalised, and practical coaching.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="section about-values" id="about-values">
+  <div class="about-values__container">
+    <div class="about-values__header scroll-reveal">
+      <span class="section-label">What Drives Us</span>
+      <h2 class="section-title">Why Students Trust Success Learning</h2>
+      <div class="gold-line-center"></div>
+    </div>
+    <div class="about-values__grid">
+      <div *ngFor="let v of values; let i = index" class="about-values__card scroll-reveal stagger-{{i+1}}">
+        <div class="about-values__card-icon"><i class="bi {{v.icon}}"></i></div>
+        <h4>{{ v.title }}</h4>
+        <p>{{ v.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Methodology -->
+<section class="section section-alt about-method" id="about-methodology">
+  <div class="about-method__container">
+    <div class="about-method__header scroll-reveal">
+      <span class="section-label">How We Train</span>
+      <h2 class="section-title">Our Learning Methodology</h2>
+      <div class="gold-line-center"></div>
+      <p class="section-subtitle" style="margin: 0 auto;">A proven 5-step approach that has helped hundreds of students achieve their goals.</p>
+    </div>
+    <div class="about-method__steps">
+      <div *ngFor="let m of methodology; let i = index" class="about-method__step scroll-reveal stagger-{{i+1}}">
+        <div class="about-method__step-num">{{ m.step }}</div>
+        <div class="about-method__step-content">
+          <h4>{{ m.title }}</h4>
+          <p>{{ m.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Faculty -->
+<section class="section about-faculty" id="about-faculty">
+  <div class="about-faculty__container">
+    <div class="about-faculty__content scroll-reveal-left">
+      <span class="section-label">Our Team</span>
+      <h2 class="section-title">Expert Faculty</h2>
+      <div class="gold-line"></div>
+      <p>Our trainers are not just qualified — they are practitioners who stay current with exam pattern changes, scoring criteria updates, and language teaching best practices.</p>
+      <ul class="about-faculty__list">
+        <li><i class="bi bi-check-circle-fill"></i> Certified and experienced language instructors</li>
+        <li><i class="bi bi-check-circle-fill"></i> Regular training on updated exam formats</li>
+        <li><i class="bi bi-check-circle-fill"></i> Personalised feedback approach for every student</li>
+        <li><i class="bi bi-check-circle-fill"></i> Approachable, supportive, and patient teaching style</li>
+      </ul>
+    </div>
+    <div class="about-faculty__image scroll-reveal-right">
+      <img src="assets/images/about-people.jpg" alt="Faculty at Success Learning" loading="lazy" width="520" height="380">
+    </div>
+  </div>
+</section>
+
+<app-cta-banner title="Ready to Begin?" subtitle="Talk to our team and find the right course for your goals."></app-cta-banner>

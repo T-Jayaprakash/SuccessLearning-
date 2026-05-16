@@ -1,0 +1,53 @@
+@import 'variables';
+
+.contact-page {
+  &__container {
+    max-width: $container-max; margin: 0 auto; padding: 0 $container-padding;
+    display: grid; grid-template-columns: 1fr; gap: $space-8;
+    @media (min-width: $bp-lg) { grid-template-columns: 1.2fr 1fr; }
+  }
+
+  &__details { margin: $space-5 0; }
+  &__detail {
+    display: flex; gap: $space-3; margin-bottom: $space-4;
+    i { font-size: 20px; color: $color-accent; flex-shrink: 0; margin-top: 3px; }
+    strong { display: block; font-family: $font-primary; font-size: $font-size-sm; color: $color-text-dark; margin-bottom: 2px; }
+    span, a { font-size: $font-size-sm; color: $color-text-light; line-height: $line-height-base; }
+    a { transition: color $transition-fast; &:hover { color: $color-accent; } }
+  }
+
+  &__map { border-radius: $radius-xl; overflow: hidden; margin-top: $space-4; box-shadow: $shadow-md; }
+
+  &__form-card {
+    background: $color-white; border: 1px solid $color-border; border-radius: $radius-xl;
+    padding: $space-7; box-shadow: $shadow-card; position: sticky; top: 100px;
+    h3 { font-family: $font-primary; margin-bottom: $space-1; }
+    > p { font-size: $font-size-sm; color: $color-text-light; margin-bottom: $space-5; }
+  }
+
+  &__field {
+    margin-bottom: $space-4;
+    label { display: block; font-family: $font-primary; font-size: $font-size-sm; font-weight: $font-weight-medium; color: $color-text-dark; margin-bottom: $space-1; }
+    input, select, textarea {
+      width: 100%; padding: $space-3; border: 1px solid $color-border; border-radius: $radius-md;
+      font-size: $font-size-sm; color: $color-text; transition: border-color $transition-fast;
+      background: $color-white;
+      &:focus { border-color: $color-primary; outline: none; box-shadow: 0 0 0 3px rgba($color-primary, 0.08); }
+      &::placeholder { color: $color-text-light; }
+    }
+    textarea { resize: vertical; min-height: 100px; }
+    select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23718096' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
+  }
+
+  &__submit {
+    width: 100%; justify-content: center;
+    &:disabled { opacity: 0.7; cursor: not-allowed; }
+  }
+
+  &__status {
+    margin-top: $space-3; padding: $space-3; border-radius: $radius-md; font-size: $font-size-sm;
+    display: flex; align-items: center; gap: $space-2;
+    &--success { background: #f0fff4; color: #22543d; border: 1px solid #c6f6d5; }
+    &--error { background: #fff5f5; color: #742a2a; border: 1px solid #fed7d7; }
+  }
+}

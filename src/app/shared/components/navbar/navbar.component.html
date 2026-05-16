@@ -1,0 +1,97 @@
+<header class="navbar" [class.scrolled]="isScrolled" id="main-navbar">
+  <div class="navbar__container">
+    <!-- Logo -->
+    <a routerLink="/" class="navbar__logo" (click)="closeMobileMenu()">
+      <img src="assets/images/sl-head-logo.jpg" alt="Success Learning Logo" width="110" height="40">
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="navbar__nav" aria-label="Main Navigation">
+      <ul class="navbar__list">
+        <li *ngFor="let item of navItems" class="navbar__item"
+            [class.has-dropdown]="item.children"
+            (mouseenter)="item.children ? activeDropdown = item.label : null"
+            (mouseleave)="item.children ? activeDropdown = null : null">
+
+          <a *ngIf="!item.children"
+             [routerLink]="item.route"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: item.route === '/'}"
+             class="navbar__link">
+            {{ item.label }}
+          </a>
+
+          <button *ngIf="item.children"
+                  class="navbar__link navbar__dropdown-trigger"
+                  [class.active]="router.url.startsWith('/courses')"
+                  (click)="toggleDropdown(item.label)">
+            {{ item.label }}
+            <i class="bi bi-chevron-down navbar__chevron" [class.rotated]="activeDropdown === item.label"></i>
+          </button>
+
+          <div *ngIf="item.children" class="navbar__dropdown" [class.open]="activeDropdown === item.label">
+            <a *ngFor="let child of item.children"
+               [routerLink]="child.route"
+               routerLinkActive="active"
+               class="navbar__dropdown-item">
+              {{ child.label }}
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- CTA Button -->
+    <a href="https://wa.me/919840979292" target="_blank" rel="noopener" class="navbar__cta" id="navbar-cta">
+      <i class="bi bi-whatsapp"></i>
+      <span>Get in Touch</span>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar__toggle" (click)="toggleMobileMenu()" [attr.aria-expanded]="isMobileMenuOpen" aria-label="Toggle navigation menu" id="mobile-menu-toggle">
+      <span class="navbar__toggle-bar" [class.open]="isMobileMenuOpen"></span>
+      <span class="navbar__toggle-bar" [class.open]="isMobileMenuOpen"></span>
+      <span class="navbar__toggle-bar" [class.open]="isMobileMenuOpen"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="navbar__mobile" [class.open]="isMobileMenuOpen">
+    <nav class="navbar__mobile-nav" aria-label="Mobile Navigation">
+      <ul class="navbar__mobile-list">
+        <li *ngFor="let item of navItems" class="navbar__mobile-item">
+          <a *ngIf="!item.children"
+             [routerLink]="item.route"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: item.route === '/'}"
+             class="navbar__mobile-link"
+             (click)="closeMobileMenu()">
+            {{ item.label }}
+          </a>
+
+          <button *ngIf="item.children"
+                  class="navbar__mobile-link navbar__mobile-dropdown-trigger"
+                  (click)="toggleDropdown(item.label)">
+            {{ item.label }}
+            <i class="bi bi-chevron-down navbar__chevron" [class.rotated]="activeDropdown === item.label"></i>
+          </button>
+
+          <div *ngIf="item.children" class="navbar__mobile-dropdown" [class.open]="activeDropdown === item.label">
+            <a *ngFor="let child of item.children"
+               [routerLink]="child.route"
+               routerLinkActive="active"
+               class="navbar__mobile-dropdown-item"
+               (click)="closeMobileMenu()">
+              {{ child.label }}
+            </a>
+          </div>
+        </li>
+      </ul>
+      <a href="https://wa.me/919840979292" target="_blank" rel="noopener" class="navbar__mobile-cta">
+        <i class="bi bi-whatsapp"></i> Get in Touch
+      </a>
+    </nav>
+  </div>
+</header>
+<!-- Spacer for fixed navbar -->
+<div class="navbar-spacer"></div>

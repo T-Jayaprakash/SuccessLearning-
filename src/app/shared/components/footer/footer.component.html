@@ -1,0 +1,70 @@
+<footer class="footer" id="site-footer">
+  <div class="footer__main">
+    <div class="footer__container">
+      <!-- Brand Column -->
+      <div class="footer__col footer__brand">
+        <img src="assets/images/sl-head-logo.jpg" alt="Success Learning" class="footer__logo" width="130" height="46">
+        <p class="footer__desc">Expert language and international exam coaching centre in Thillai Nagar, Trichy. Helping students and professionals achieve their goals since day one.</p>
+        <div class="footer__social">
+          <a href="https://m.facebook.com/people/Success-Learning-Trichy/100083380600999/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/successlearning.trichy" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/919840979292" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li *ngFor="let link of quickLinks"><a [routerLink]="link.route">{{ link.label }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Courses -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Our Courses</h4>
+        <ul class="footer__links">
+          <li *ngFor="let course of courses"><a [routerLink]="course.route">{{ course.label }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Contact Us</h4>
+        <ul class="footer__contact">
+          <li>
+            <i class="bi bi-geo-alt"></i>
+            <span>D73, 7th Cross St W, Thillai Nagar East, Tiruchirappalli, Tamil Nadu 620018</span>
+          </li>
+          <li>
+            <i class="bi bi-telephone"></i>
+            <a href="tel:+919840979292">98409 79292</a>
+          </li>
+          <li>
+            <i class="bi bi-whatsapp"></i>
+            <a href="https://wa.me/919840979292" target="_blank" rel="noopener">WhatsApp Us</a>
+          </li>
+          <li>
+            <i class="bi bi-clock"></i>
+            <span>Mon – Sat: 9:00 AM – 8:00 PM</span>
+          </li>
+        </ul>
+        <!-- Mini Map -->
+        <div class="footer__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8471055462032!2d78.69060467912901!3d10.82301029593393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf559a644cfe9%3A0x89223ee9600656c5!2sSuccess%20Learning%20-%20IELTS%2CTOEFL%2CSpoken%20English%2CCommunication%20English%2C%20GRE%2C%20GMAT%20Training%20and%20Coaching%20Centre%20in%20Trichy!5e0!3m2!1sen!2sin!4v1705492727851!5m2!1sen!2sin"
+            width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Success Learning Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer__bottom">
+    <div class="footer__container">
+      <p>&copy; {{ currentYear }} Success Learning. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

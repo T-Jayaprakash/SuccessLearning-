@@ -1,0 +1,48 @@
+<app-page-hero title="What Our Students Say" subtitle="Real feedback from real students. No fake reviews." [breadcrumbs]="[{label: 'Testimonials'}]"></app-page-hero>
+
+<!-- Rating Overview -->
+<section class="section tm-overview" id="rating-overview">
+  <div class="tm-overview__container">
+    <div class="tm-overview__card scroll-reveal">
+      <div class="tm-overview__score">
+        <span class="tm-overview__number">{{ overallRating }}</span>
+        <div class="tm-overview__stars">
+          <i class="bi bi-star-fill" *ngFor="let s of getStars(5)"></i>
+        </div>
+        <span class="tm-overview__count">Based on {{ totalReviews }}+ Google Reviews</span>
+      </div>
+      <div class="tm-overview__source">
+        <i class="bi bi-google"></i>
+        <span>Google Reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews Grid -->
+<section class="section section-alt tm-reviews" id="reviews-grid">
+  <div class="tm-reviews__container">
+    <div class="tm-reviews__grid">
+      <div *ngFor="let review of reviews; let i = index" class="tm-review-card scroll-reveal stagger-{{i+1}}" [id]="'review-' + i">
+        <div class="tm-review-card__header">
+          <div class="tm-review-card__avatar">{{ getInitials(review.name) }}</div>
+          <div>
+            <strong class="tm-review-card__name">{{ review.name }}</strong>
+            <span class="tm-review-card__role">{{ review.designation }}</span>
+          </div>
+        </div>
+        <div class="tm-review-card__stars">
+          <i class="bi bi-star-fill" *ngFor="let s of getStars(review.rating)"></i>
+          <i class="bi bi-star" *ngFor="let s of getEmptyStars(review.rating)"></i>
+        </div>
+        <p class="tm-review-card__text">"{{ review.text }}"</p>
+        <div class="tm-review-card__meta" *ngIf="review.score">
+          <span class="tm-review-card__course">{{ review.course }}</span>
+          <span class="tm-review-card__score">{{ review.score }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-cta-banner title="Join Our Success Stories" subtitle="Start your preparation today and achieve your goals."></app-cta-banner>

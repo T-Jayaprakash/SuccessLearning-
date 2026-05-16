@@ -1,0 +1,138 @@
+<div *ngIf="course">
+  <!-- Hero -->
+  <app-page-hero
+    [title]="course.heroTitle"
+    [subtitle]="course.heroSubtitle"
+    [breadcrumbs]="[{label: 'Courses', route: '/courses'}, {label: course.name}]">
+  </app-page-hero>
+
+  <!-- Quick Info Bar -->
+  <div class="cd-info-bar" id="course-info-bar">
+    <div class="cd-info-bar__container">
+      <div class="cd-info-bar__item"><i class="bi bi-clock"></i><div><strong>Duration</strong><span>{{ course.duration }}</span></div></div>
+      <div class="cd-info-bar__item"><i class="bi bi-laptop"></i><div><strong>Mode</strong><span>{{ course.mode }}</span></div></div>
+      <div class="cd-info-bar__item"><i class="bi bi-people"></i><div><strong>Batch Size</strong><span>{{ course.batchSize }}</span></div></div>
+      <div class="cd-info-bar__item cd-info-bar__item--cta">
+        <a href="https://wa.me/919840979292?text=Hi%2C%20I%20am%20interested%20in%20{{course.name}}%20coaching" target="_blank" rel="noopener" class="btn-primary">
+          <i class="bi bi-whatsapp"></i> Enquire Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <section class="section cd-overview" id="course-overview">
+    <div class="cd-overview__container">
+      <div class="cd-overview__content scroll-reveal">
+        <span class="section-label">Course Overview</span>
+        <h2 class="section-title">About {{ course.fullName }}</h2>
+        <div class="gold-line"></div>
+        <p>{{ course.overview }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Should Join -->
+  <section class="section section-alt cd-who" id="who-should-join">
+    <div class="cd-who__container">
+      <div class="cd-who__content scroll-reveal-left">
+        <span class="section-label">Who Is This For</span>
+        <h2 class="section-title">Who Should Join</h2>
+        <div class="gold-line"></div>
+        <ul class="cd-who__list">
+          <li *ngFor="let item of course.whoShouldJoin"><i class="bi bi-check-circle-fill"></i> {{ item }}</li>
+        </ul>
+      </div>
+      <div class="cd-who__learn scroll-reveal-right">
+        <span class="section-label">Curriculum</span>
+        <h2 class="section-title">What You Will Learn</h2>
+        <div class="gold-line"></div>
+        <ul class="cd-who__list">
+          <li *ngFor="let item of course.whatYouWillLearn"><i class="bi bi-arrow-right-circle-fill"></i> {{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Methodology -->
+  <section class="section cd-method" id="training-methodology">
+    <div class="cd-method__container">
+      <div class="cd-method__header scroll-reveal">
+        <span class="section-label">How We Train</span>
+        <h2 class="section-title">Training Methodology</h2>
+        <div class="gold-line-center"></div>
+      </div>
+      <div class="cd-method__grid">
+        <div *ngFor="let step of course.methodology; let i = index" class="cd-method__step scroll-reveal stagger-{{i+1}}">
+          <div class="cd-method__step-num">{{ i + 1 }}</div>
+          <p>{{ step }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="section section-alt cd-highlights" id="course-highlights">
+    <div class="cd-highlights__container">
+      <div class="cd-highlights__header scroll-reveal">
+        <span class="section-label">Key Benefits</span>
+        <h2 class="section-title">Course Highlights</h2>
+        <div class="gold-line-center"></div>
+      </div>
+      <div class="cd-highlights__grid">
+        <div *ngFor="let h of course.highlights; let i = index" class="cd-highlights__item scroll-reveal stagger-{{i+1}}">
+          <i class="bi bi-check2-square"></i>
+          <span>{{ h }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section cd-faq" id="course-faq">
+    <div class="cd-faq__container">
+      <div class="cd-faq__header scroll-reveal">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="gold-line-center"></div>
+      </div>
+      <div class="cd-faq__content scroll-reveal">
+        <app-faq-accordion [items]="course.faqs"></app-faq-accordion>
+      </div>
+    </div>
+  </section>
+
+  <!-- Study Destinations -->
+  <section *ngIf="relatedDestinations.length" class="section section-alt cd-destinations" id="course-destinations">
+    <div class="cd-destinations__container">
+      <div class="cd-destinations__header scroll-reveal">
+        <span class="section-label">Study Abroad</span>
+        <h2 class="section-title">Where {{ course.name }} Takes You</h2>
+        <div class="gold-line-center"></div>
+        <p class="section-subtitle">Prepare for {{ course.name }} and open doors to these study destinations.</p>
+      </div>
+      <div class="cd-destinations__grid">
+        <a *ngFor="let rd of relatedDestinations; let i = index"
+           [routerLink]="'/study-abroad/' + rd.slug"
+           class="cd-dest-card scroll-reveal stagger-{{i+1}}">
+          <div class="cd-dest-card__image">
+            <img [src]="rd.image" [alt]="'Study in ' + rd.name" loading="lazy">
+            <span class="cd-dest-card__flag">{{ rd.flag }}</span>
+          </div>
+          <div class="cd-dest-card__body">
+            <h4>{{ rd.name }}</h4>
+            <p>{{ rd.tagline }}</p>
+          </div>
+        </a>
+      </div>
+      <div class="cd-destinations__action scroll-reveal">
+        <a routerLink="/study-abroad" class="btn-outline">Explore All Destinations <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <app-cta-banner
+    [title]="'Ready to Start ' + course.name + ' Coaching?'"
+    subtitle="Get in touch with our team. Book a free consultation today.">
+  </app-cta-banner>
+</div>

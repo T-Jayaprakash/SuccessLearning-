@@ -1,0 +1,68 @@
+*{
+    color: #00a8ff;
+}
+.btn-primary{
+    color: white;
+    background-color: #00a8ff;
+    border-color: #00a8ff;
+}
+.rounded-pill{
+    min-width: 95px;
+}
+@media only screen and (min-width: 992px) {
+    button{
+        margin: 5px 20px 5px 0px;
+    }
+    .navbar-nav{
+        box-shadow: none !important;
+        border-top: 0px !important;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .rounded-pill{
+        margin:10px;
+    }
+    .btn-light, .active{
+        background-color: transparent;
+        border-radius: 0px !important;
+        border: 1px solid rgb(185, 184, 184);
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 0px;
+        border: 0px;
+        margin: 0px;
+    }
+    .container-fluid{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #navbarSupportedContent {
+        background-color: transparent !important;
+        height: 0px;
+    }
+    .navbar-nav{
+        background-color: white;
+        border-color: #84cdf2 !important;        
+    }
+}
+.navbar-collapse{
+    flex-grow: unset;
+}
+nav{
+    width: 100vw;
+}
+btn:focus{
+    outline: none;
+}
+.navbar-toggler:focus{
+    outline: none !important;
+    box-shadow: none;
+}
+.cursor{
+    cursor: pointer;
+}
+
+input, textarea{
+    border-color: #006994;
+    padding: 10px;
+}

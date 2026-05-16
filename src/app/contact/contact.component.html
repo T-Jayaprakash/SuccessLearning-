@@ -1,0 +1,136 @@
+<!-- contact.component.html -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered border-none">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="ms-2">
+                    <img src="../../assets/images/sl-head-logo.jpg" style="width: 100px;" alt="">
+                    <h1 class="modal-title fs-5" id="contactModalLabel">Contact Us</h1>
+                </div>
+                <button type="button" class="btn-close mt-2 me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form #form = 'ngForm' (submit)="send(form)" novalidate>
+                    <div class="mb-4 form-group">
+                        <input type="text" class="form-control" id="name" name="Name" placeholder="Username"
+                            [(ngModel)]="from_name" >
+                    </div>
+                    <div class="mb-4 form-group">
+                        <input type="email" class="form-control" id="email" name="EmailAddress" placeholder="Email"
+                            [(ngModel)]="from_email" >
+                    </div>
+                    <div class="mb-4 form-group">
+                        <input type="text" class="form-control" id="phone" name="Phone" placeholder="Phone"
+                            [(ngModel)]="from_phone" >
+                    </div>
+                    <div class="mb-4 form-group">
+                        <textarea class="form-control" rows="3" name="Message" placeholder="Type your message here"
+                            [(ngModel)]="message" ></textarea>
+                    </div>
+                    <div class="col-lg-3 mx-auto text-center">
+                        <button class="btn btn-primary px-4 mb-2 fw-bold" type="submit" value="Send"
+                        style="border-radius: 5px; background-color: #00a8ff; border-color: #00a8ff;"
+                        data-bs-dismiss="modal">
+                            Send
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <app-banner>
+    <h1 class="quote fw-bold lh-base">Education's purpose is to replace an empty mind with an open one</h1>
+    <div class="author text-center mt-3"><h4 style="color: #0015fb;">- Benjamin Franklin</h4></div>
+    <img class="image" src="../../assets/images/contact-us-2.png" width="100%" alt="">
+</app-banner>
+
+<div class="container mt-5">
+
+    <section>
+        <div class="text-start">
+            <h4 class="fw-medium">Contact Us</h4>
+            <div class="d-flex mb-3">
+                <span class="rounded-pill" id="line"></span>
+                <span class="rounded-pill" id="dot"></span>
+                <span class="rounded-pill" id="dot"></span>
+            </div>
+        </div>
+
+        <p class="mt-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus error beatae labore doloremque porro tempora enim perferendis repellat consectetur nihil
+            exercitationem consequatur odit atque reiciendis, culpa fuga provident. Soluta, amet?
+        </p>
+    </section>
+
+</div>
+
+<div class="mt-4">
+    <div class="row mx-0 text-center align-items-center py-3" id="cdetails">
+        <div class="col-lg-4 mb-3 mb-lg-0 align-items-center">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span class="ms-3 align-middle">Location</span>
+        </div>
+        <div class="col-lg-4 mb-3 mb-lg-0 align-items-center">
+            <i class="bi bi-envelope-fill"></i>
+            <span class="ms-3 align-middle">successlearning@gmail.com</span>
+        </div>
+        <div class="col-lg-4  mb-3 mb-lg-0 align-items-center">
+            <i class="bi bi-telephone-fill"></i>
+            <span class="ms-3 align-middle">+91 9876543210</span>
+        </div>
+    </div>
+</div>
+
+<div class="container px-3 mt-4">
+
+    <section>
+        <div class="text-start mt-4">
+            <h4 class="fw-medium">Send Your Queries</h4>
+            <div class="d-flex mb-3">
+                <span class="rounded-pill" id="line"></span>
+                <span class="rounded-pill" id="dot"></span>
+                <span class="rounded-pill" id="dot"></span>
+            </div>
+        </div>
+
+        <p class="mt-4 mb-0 fw-medium">Let us know if you have any queries</p>
+
+        <div class="row align-items-center mt-4 mt-lg-0 mb-5" >
+            <div class="col-lg-6">
+                <div>
+                    <div>
+                        <form (submit)="send()">
+                          <div class="mb-4 form-group">
+                            <input type="text" class="form-control" id="name" name="Name" placeholder="Username" [(ngModel)]="from_name" required>
+                          </div>
+                          <div class="mb-4 form-group">
+                            <input type="email" class="form-control" id="email" name="EmailAddress" placeholder="Email" [(ngModel)]="from_email" required>
+                          </div>
+                          <div class="mb-4 form-group">
+                            <textarea class="form-control" rows="3" name="Message" placeholder="Type your message here" [(ngModel)]="message" required></textarea>
+                          </div>
+                          <div class="col-lg-3 mx-auto text-center">
+                            <button class="btn btn-primary px-4 mb-3 mb-lg-0" type="submit" value="Send">Send</button>
+                          </div>
+                        </form>
+                      </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5 text-center">
+                <img src="../../assets/images/contact-us-1.png" width="75%" alt="" >
+            </div>
+        </div>
+
+
+    </section>
+
+</div>
+ -->

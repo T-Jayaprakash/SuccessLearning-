@@ -1,0 +1,132 @@
+@import 'variables';
+
+// ===== HERO =====
+.dd-hero {
+  position: relative; min-height: 380px; display: flex; align-items: flex-end;
+  &__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  &__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba($color-primary-dark, 0.92) 0%, rgba($color-primary, 0.55) 100%); }
+  &__container { position: relative; z-index: 1; max-width: $container-max; margin: 0 auto; padding: $space-8 $container-padding $space-9; width: 100%; }
+  &__breadcrumb {
+    font-size: $font-size-sm; color: rgba(white, 0.7); margin-bottom: $space-3;
+    a { color: rgba(white, 0.7); text-decoration: none; &:hover { color: $color-accent-light; } }
+    span { color: white; }
+  }
+  &__flag { font-size: 48px; display: block; margin-bottom: $space-2; }
+  &__title { font-family: $font-primary; font-size: clamp(2rem, 5vw, 3rem); font-weight: $font-weight-bold; color: white; margin-bottom: $space-2; }
+  &__subtitle { font-size: $font-size-md; color: rgba(white, 0.85); max-width: 600px; }
+}
+
+// ===== FACTS BAR =====
+.dd-facts {
+  background: $color-white; border-bottom: 1px solid $color-border; box-shadow: $shadow-sm;
+  &__container {
+    max-width: $container-max; margin: 0 auto; padding: $space-4 $container-padding;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: $space-4;
+  }
+  &__item {
+    display: flex; align-items: center; gap: $space-3;
+    i { font-size: 22px; color: $color-accent; }
+    strong { display: block; font-size: $font-size-xs; color: $color-text-light; font-weight: $font-weight-medium; text-transform: uppercase; letter-spacing: 0.5px; }
+    span { display: block; font-size: $font-size-sm; color: $color-text-dark; font-weight: $font-weight-semibold; }
+    &--cta { margin-left: auto; }
+  }
+}
+
+// ===== ABOUT =====
+.dd-about {
+  &__container { max-width: $container-max; margin: 0 auto; padding: 0 $container-padding; }
+  &__content {
+    max-width: 800px;
+    p { font-size: $font-size-md; line-height: $line-height-relaxed; color: $color-text; }
+  }
+}
+
+// ===== UNIVERSITIES =====
+.dd-unis {
+  &__container { max-width: $container-max; margin: 0 auto; padding: 0 $container-padding; }
+  &__header { text-align: center; margin-bottom: $space-7; }
+  &__grid { display: grid; grid-template-columns: 1fr; gap: $space-3; max-width: 700px; margin: 0 auto;
+    @media (min-width: $bp-md) { grid-template-columns: repeat(2, 1fr); }
+  }
+  &__item {
+    display: flex; align-items: center; gap: $space-3; padding: $space-4; background: $color-white;
+    border-radius: $radius-md; box-shadow: $shadow-xs; transition: all $transition-base;
+    &:hover { box-shadow: $shadow-md; transform: translateX(4px); }
+    i { color: $color-primary; font-size: 20px; }
+    span { font-size: $font-size-sm; font-weight: $font-weight-medium; color: $color-text-dark; }
+  }
+}
+
+// ===== COURSES & BENEFITS =====
+.dd-courses-benefits {
+  &__container { max-width: $container-max; margin: 0 auto; padding: 0 $container-padding; display: grid; grid-template-columns: 1fr; gap: $space-8;
+    @media (min-width: $bp-md) { grid-template-columns: 1fr 1fr; }
+  }
+}
+
+.dd-list {
+  list-style: none; padding: 0; margin: $space-4 0 0;
+  li {
+    display: flex; align-items: flex-start; gap: $space-3; padding: $space-2 0;
+    font-size: $font-size-sm; color: $color-text; line-height: $line-height-base;
+    i { color: $color-accent; margin-top: 3px; flex-shrink: 0; }
+  }
+  &--benefits li i { color: $color-success; }
+  &--careers li i { color: $color-primary; }
+}
+
+// ===== EXAMS =====
+.dd-exams {
+  &__container { max-width: $container-max; margin: 0 auto; padding: 0 $container-padding; }
+  &__header { text-align: center; margin-bottom: $space-7; }
+  &__grid { display: grid; grid-template-columns: 1fr; gap: $space-3; max-width: 600px; margin: 0 auto;
+    @media (min-width: $bp-sm) { grid-template-columns: repeat(2, 1fr); }
+  }
+  &__item {
+    display: flex; align-items: center; gap: $space-3; padding: $space-4; background: $color-white;
+    border-radius: $radius-md; box-shadow: $shadow-xs;
+    i { color: $color-success; font-size: 18px; }
+    span { font-size: $font-size-sm; font-weight: $font-weight-medium; color: $color-text-dark; }
+  }
+}
+
+// ===== VISA & CAREER =====
+.dd-visa-career {
+  &__container { max-width: $container-max; margin: 0 auto; padding: 0 $container-padding; display: grid; grid-template-columns: 1fr; gap: $space-8;
+    @media (min-width: $bp-md) { grid-template-columns: 1fr 1fr; }
+  }
+  &__col p { font-size: $font-size-sm; line-height: $line-height-relaxed; color: $color-text; margin-top: $space-4; }
+}
+
+// ===== LIFESTYLE =====
+.dd-lifestyle {
+  &__container { max-width: 800px; margin: 0 auto; padding: 0 $container-padding;
+    p { font-size: $font-size-md; line-height: $line-height-relaxed; color: $color-text; margin-top: $space-4; }
+  }
+}
+
+// ===== FAQ =====
+.dd-faq {
+  &__container { max-width: 800px; margin: 0 auto; padding: 0 $container-padding; }
+  &__header { text-align: center; margin-bottom: $space-6; }
+}
+
+// ===== RELATED =====
+.dd-related {
+  &__container { max-width: $container-max; margin: 0 auto; padding: 0 $container-padding; }
+  &__header { text-align: center; margin-bottom: $space-7; }
+  &__grid { display: grid; grid-template-columns: 1fr; gap: $space-5;
+    @media (min-width: $bp-md) { grid-template-columns: repeat(3, 1fr); }
+  }
+  &__card {
+    text-decoration: none; color: inherit; border-radius: $radius-lg; overflow: hidden;
+    background: $color-white; box-shadow: $shadow-card; transition: all $transition-base;
+    &:hover { box-shadow: $shadow-card-hover; transform: translateY(-4px); }
+    img { width: 100%; height: 180px; object-fit: cover; transition: transform 0.5s ease; }
+    &:hover img { transform: scale(1.05); }
+  }
+  &__info { padding: $space-4; }
+  &__flag { font-size: 24px; margin-right: $space-2; }
+  &__info strong { font-family: $font-primary; font-size: $font-size-base; color: $color-text-dark; }
+  &__tagline { display: block; font-size: $font-size-xs; color: $color-text-light; margin-top: $space-1; }
+}

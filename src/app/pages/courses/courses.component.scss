@@ -1,0 +1,83 @@
+@import 'variables';
+
+.courses-list {
+  &__container { max-width: $container-max; margin: 0 auto; padding: 0 $container-padding; }
+
+  &__toolbar {
+    display: flex; flex-direction: column; gap: $space-4; margin-bottom: $space-7;
+    @media (min-width: $bp-lg) { flex-direction: row; justify-content: space-between; align-items: center; }
+  }
+
+  &__search {
+    position: relative; max-width: 360px; width: 100%;
+    i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: $color-text-light; font-size: 16px; }
+    input {
+      width: 100%; padding: $space-3 $space-4 $space-3 40px;
+      border: 1px solid $color-border; border-radius: $radius-md;
+      font-size: $font-size-sm; color: $color-text;
+      transition: border-color $transition-fast;
+      &:focus { border-color: $color-primary; outline: none; }
+      &::placeholder { color: $color-text-light; }
+    }
+  }
+
+  &__filters { display: flex; flex-wrap: wrap; gap: $space-2; }
+
+  &__filter-btn {
+    padding: $space-2 $space-4; border: 1px solid $color-border; border-radius: $radius-full;
+    font-family: $font-primary; font-size: $font-size-xs; font-weight: $font-weight-medium;
+    color: $color-text-light; background: $color-white; cursor: pointer;
+    transition: all $transition-fast;
+    &:hover { border-color: $color-primary; color: $color-primary; }
+    &.active { background: $color-primary; color: $color-white; border-color: $color-primary; }
+  }
+
+  &__grid {
+    display: grid; grid-template-columns: 1fr; gap: $space-5;
+    @media (min-width: $bp-md) { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: $bp-lg) { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  &__empty {
+    text-align: center; padding: $space-9; color: $color-text-light;
+    i { font-size: 48px; display: block; margin-bottom: $space-4; }
+    p { font-size: $font-size-md; }
+  }
+}
+
+.cl-card {
+  background: $color-white; border: 1px solid $color-border; border-radius: $radius-lg;
+  padding: $space-6; text-decoration: none; display: flex; flex-direction: column;
+  transition: all $transition-base;
+  &:hover { border-color: transparent; box-shadow: $shadow-card-hover; transform: translateY(-4px);
+    .cl-card__link { color: $color-accent; }
+  }
+
+  &__header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: $space-4; }
+
+  &__icon {
+    width: 52px; height: 52px; border-radius: $radius-lg;
+    display: flex; align-items: center; justify-content: center; font-size: 22px;
+  }
+
+  &__meta { display: flex; flex-direction: column; gap: 2px; text-align: right;
+    span { font-size: $font-size-xs; color: $color-text-light; display: flex; align-items: center; gap: 4px; justify-content: flex-end;
+      i { font-size: 12px; }
+    }
+  }
+
+  &__name { font-family: $font-primary; font-size: $font-size-lg; font-weight: $font-weight-semibold; color: $color-text-dark; margin-bottom: $space-2; }
+  &__desc { font-size: $font-size-sm; color: $color-text-light; line-height: $line-height-base; margin-bottom: $space-4; flex: 1; }
+
+  &__highlights { display: flex; flex-wrap: wrap; gap: $space-1; margin-bottom: $space-4; }
+  &__tag {
+    padding: 3px 10px; border-radius: $radius-full; font-size: 11px; font-weight: $font-weight-medium;
+    background: $color-bg-alt; color: $color-text-light;
+  }
+
+  &__link {
+    display: inline-flex; align-items: center; gap: $space-1;
+    font-family: $font-primary; font-size: $font-size-sm; font-weight: $font-weight-semibold;
+    color: $color-primary; transition: all $transition-base;
+  }
+}

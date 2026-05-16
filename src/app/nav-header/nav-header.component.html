@@ -1,0 +1,27 @@
+<nav #navBar class="navbar fixed-top p-0 navbar-expand-lg bg-white px-lg-5 shadow-sm">
+  <div class="container-fluid align-items-center">
+    <div class="cursor fw-bold mx-lg-3 mb-0 ps-4 ps-lg-2 py-1 text-nowrap" routerLink="">
+      <img src="../../assets/images/sl-head-logo.jpg" style="width: 100px;" alt="">
+    </div>
+    <button class="navbar-toggler border-0 pe-4 pe-lg-0 py-3" type="button" (click)="navBtnClick()" [class.collapsed]="isNavbarCollapse" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span #hamIcon class="navbar-toggler-icon"></span>
+    </button>
+    <div [class.show]="isNavbarCollapse" class="collapse navbar-collapse py-lg-3" id="navbarSupportedContent">
+      <ul class="navbar-nav border-top shadow-sm mx-lg-0 py-2 py-lg-0 mb-lg-0">
+        <li class="nav-item d-grid">
+          <button class="px-lg-3 px-1 btn btn-light rounded-pill fw-bold" routerLink="about" routerLinkActive="active">About</button>
+        </li>
+        <li class="nav-item d-grid">
+          <button class="px-lg-3 px-1 btn btn-light rounded-pill fw-bold" routerLink="programs" routerLinkActive="active">Program</button>
+        </li>
+        <li class="nav-item d-grid">
+          <button class="px-lg-3 px-1 btn btn-light rounded-pill fw-bold text-nowrap" data-bs-toggle="modal" data-bs-target="#contactModal">Contact us</button>
+        </li>
+        <!-- <li class="nav-item text-center text-nowrap">
+          <button class="px-3 btn btn-primary rounded-pill fw-bold shadow" routerLink="signup" routerLinkActive="active">Sign up</button>
+          <button class="px-3 btn btn-primary rounded-pill fw-bold shadow" routerLink="login" routerLinkActive="active">login</button>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>

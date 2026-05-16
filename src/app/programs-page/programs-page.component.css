@@ -1,0 +1,35 @@
+.container{
+    user-select: none;
+}
+.card {
+    border: 0;
+    box-shadow: 5px 5px 20px  10px #d3e9fc !important ;
+    cursor: pointer;
+}
+h4{
+    color: #006994;
+}
+p{
+    text-align: justify;
+}
+#heading5{
+    color: #00a8ff;
+    font-weight: 600;
+}
+
+#card-para{
+    font-weight: bold;
+}
+
+#heading-underline {
+    text-align: center; /* Center the heading text if needed */
+}
+.card-body{
+    padding: 35px !important;
+}
+.custom-card-height{
+    height: 180px;
+}
+.card-body .row p {
+    font-size: 0.85rem;
+}

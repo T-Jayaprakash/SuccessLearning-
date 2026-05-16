@@ -1,0 +1,73 @@
+@import 'variables';
+
+.container {
+  width: 100%;
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+.section { padding: $space-9 0; @media (min-width: $bp-lg) { padding: $space-11 0; } }
+.section-alt { background-color: $color-bg-alt; }
+.section-dark { background-color: $color-primary; color: $color-white; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: $space-5; @media (min-width: $bp-md) { grid-template-columns: repeat(2, 1fr); } }
+.grid-3 { display: grid; grid-template-columns: 1fr; gap: $space-5; @media (min-width: $bp-md) { grid-template-columns: repeat(2, 1fr); } @media (min-width: $bp-lg) { grid-template-columns: repeat(3, 1fr); } }
+.grid-4 { display: grid; grid-template-columns: 1fr; gap: $space-5; @media (min-width: $bp-sm) { grid-template-columns: repeat(2, 1fr); } @media (min-width: $bp-lg) { grid-template-columns: repeat(4, 1fr); } }
+
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: $space-2;
+  font-family: $font-primary; font-weight: $font-weight-semibold; font-size: $font-size-sm;
+  padding: 0.75rem 1.75rem; border-radius: $radius-md; border: 2px solid $color-accent;
+  background: $color-accent; color: $color-white; cursor: pointer; text-decoration: none;
+  transition: all $transition-base; line-height: 1;
+  &:hover { background: $color-accent-hover; border-color: $color-accent-hover; transform: translateY(-1px); box-shadow: $shadow-md; }
+}
+
+.btn-secondary {
+  display: inline-flex; align-items: center; justify-content: center; gap: $space-2;
+  font-family: $font-primary; font-weight: $font-weight-semibold; font-size: $font-size-sm;
+  padding: 0.75rem 1.75rem; border-radius: $radius-md; border: 2px solid $color-primary;
+  background: $color-primary; color: $color-white; cursor: pointer; text-decoration: none;
+  transition: all $transition-base; line-height: 1;
+  &:hover { background: $color-primary-light; border-color: $color-primary-light; transform: translateY(-1px); box-shadow: $shadow-md; }
+}
+
+.btn-outline {
+  display: inline-flex; align-items: center; justify-content: center; gap: $space-2;
+  font-family: $font-primary; font-weight: $font-weight-semibold; font-size: $font-size-sm;
+  padding: 0.75rem 1.75rem; border-radius: $radius-md; border: 2px solid $color-primary;
+  background: transparent; color: $color-primary; cursor: pointer; text-decoration: none;
+  transition: all $transition-base; line-height: 1;
+  &:hover { background: $color-primary; color: $color-white; transform: translateY(-1px); }
+}
+
+.section-label {
+  font-family: $font-primary; font-size: $font-size-sm; font-weight: $font-weight-semibold;
+  color: $color-accent; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: $space-2;
+}
+
+.section-title {
+  font-family: $font-primary; font-size: $font-size-2xl; font-weight: $font-weight-bold;
+  color: $color-text-dark; margin-bottom: $space-4; line-height: $line-height-tight;
+  @media (min-width: $bp-lg) { font-size: $font-size-3xl; }
+}
+
+.section-subtitle {
+  font-family: $font-secondary; font-size: $font-size-md; color: $color-text-light;
+  max-width: 600px; line-height: $line-height-base;
+}
+
+.gold-line {
+  width: 60px; height: 3px; background: $color-accent; border-radius: 2px; margin-bottom: $space-5;
+}
+
+.gold-line-center { @extend .gold-line; margin-left: auto; margin-right: auto; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); border: 0;
+}

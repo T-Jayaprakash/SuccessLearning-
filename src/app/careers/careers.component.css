@@ -1,0 +1,111 @@
+.container{
+    user-select: none;
+}
+
+#heading1{
+    color: #0015fb;
+    position: relative;
+}
+
+.dashed-column {
+    display: flex;
+    flex: start;
+}
+
+#span1 {
+    width: 100px;
+    height: 5px;
+    background-color: yellow;
+    border: 1px solid yellow;
+}
+
+#span2 {
+    margin-left: 3px;
+    width: 5px;
+    height: 5px;
+    background-color: yellow;
+    border-color: yellow;
+}
+
+#span3 {
+    margin-left: 3px;
+    width: 5px;
+    height: 5px;
+    background-color: yellow;
+    border-color: yellow;
+}
+
+.dashed-column-bottom {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+#span6 {
+    margin-left: 3px;
+    width: 100px;
+    height: 5px;
+    background-color: yellow;
+    border: 1px solid yellow;
+}
+
+#span4 {
+    width: 5px;
+    height: 5px;
+    background-color: yellow;
+    border-color: yellow;
+}
+
+#span5 {
+    margin-left: 3px;
+    width: 5px;
+    height: 5px;
+    background-color: yellow;
+    border-color: yellow;
+}
+
+#span7 {
+    margin-left: 3px;
+    width: 5px;
+    height: 5px;
+    background-color: yellow;
+    border-color: yellow;
+}
+
+#span8 {
+    margin-left: 3px;
+    width: 5px;
+    height: 5px;
+    background-color: yellow;
+    border-color: yellow;
+}
+
+.card {
+    /* box-shadow: rgba(132, 205, 242, 1) 0px 2px 4px 0px, rgba(132, 205, 242, 1) 0px 2px 8px 0px; */
+    /* box-shadow: rgba(132, 205, 242, 1) 0px 3px 8px; */
+    border: 0;
+    box-shadow: 2px 2px 15px  5px #e1f1fe !important ;
+}
+
+.card h5{
+    color: #00a8ff;
+}
+
+#peoplecard{
+    height: 160px;
+}
+
+button{
+    background-color: #84cdf2;
+    border: none;
+}
+.btn-primary :hover {
+    background-color: #84cdf2 !important;
+}
+h4, h6{
+    color: #006994;
+    font-weight: medium;
+}
+p{
+    text-align: justify;
+}

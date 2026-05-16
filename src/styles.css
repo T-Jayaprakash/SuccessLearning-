@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+#line {
+    margin-right: 3px;
+    width: 100px;
+    height: 3px;
+    background-color: #ffb10b;
+}
+#dot {
+    margin-right: 3px;
+    width: 4px;
+    height: 3px;
+    background-color: #ffb10b;
+}
+.modal-header{
+    align-items: flex-start;
+}
+p{
+    line-height: 170%;
+}

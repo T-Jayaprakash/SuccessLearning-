@@ -1,0 +1,28 @@
+.blue-bg{
+    padding-top: 100px;
+    min-height: 100vh;
+    background-color: #f0f8ff;
+}
+.container, .row{
+    min-height: 65vh;
+}
+h1, h3{
+    font-weight: bold;
+}
+.blue-color{
+    color: #0015fb;
+}
+h3.blue-color a {
+    color: #0015fb;
+    font-weight: bold;
+}
+
+h3.blue-color a:hover {
+    color: #0015fb;
+}
+h3>b {
+    color: black;
+}
+btn:focus{
+    outline: none;
+}

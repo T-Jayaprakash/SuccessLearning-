@@ -1,0 +1,107 @@
+<!-- ========== HERO ========== -->
+<section class="dest-hero" id="destinations-hero">
+  <div class="dest-hero__overlay"></div>
+  <div class="dest-hero__container">
+    <div class="dest-hero__content">
+      <span class="dest-hero__badge"><i class="bi bi-globe-americas"></i> Study Abroad</span>
+      <h1 class="dest-hero__title">Your Global Education Journey Starts Here</h1>
+      <p class="dest-hero__subtitle">Explore top international study destinations with expert guidance for language preparation, entrance exams, and student success.</p>
+      <div class="dest-hero__actions">
+        <a href="#countries-grid" class="hero__btn hero__btn--primary"><i class="bi bi-compass"></i> Explore Countries</a>
+        <a href="https://wa.me/919840979292?text=Hi%2C%20I%20am%20interested%20in%20study%20abroad%20guidance" target="_blank" rel="noopener" class="hero__btn hero__btn--outline"><i class="bi bi-calendar-check"></i> Book Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS BAR ========== -->
+<section class="dest-stats" id="destinations-stats">
+  <div class="dest-stats__container">
+    <div *ngFor="let stat of stats" class="dest-stats__item">
+      <i class="bi {{stat.icon}}"></i>
+      <strong>{{ stat.value }}</strong>
+      <span>{{ stat.label }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COUNTRIES GRID ========== -->
+<section class="section dest-grid-section" id="countries-grid">
+  <div class="dest-grid-section__container">
+    <div class="dest-grid-section__header scroll-reveal">
+      <span class="section-label">Destinations</span>
+      <h2 class="section-title">Explore Study Destinations</h2>
+      <div class="gold-line-center"></div>
+      <p class="section-subtitle">Choose from 11 top countries. We help you with language preparation, exam coaching, and application guidance.</p>
+    </div>
+    <div class="dest-grid">
+      <a *ngFor="let dest of destinations; let i = index"
+         [routerLink]="'/study-abroad/' + dest.slug"
+         class="dest-card scroll-reveal stagger-{{(i % 6) + 1}}"
+         [id]="'dest-card-' + dest.slug">
+        <div class="dest-card__image">
+          <img [src]="dest.image" [alt]="'Study in ' + dest.name" loading="lazy" width="400" height="250">
+          <div class="dest-card__flag">{{ dest.flag }}</div>
+          <div class="dest-card__tuition" [style.background]="getTuitionColor(dest.tuition)">{{ dest.tuition }}</div>
+        </div>
+        <div class="dest-card__body">
+          <h3 class="dest-card__name">{{ dest.name }}</h3>
+          <p class="dest-card__tagline">{{ dest.tagline }}</p>
+          <div class="dest-card__meta">
+            <span><i class="bi bi-briefcase"></i> {{ dest.workPermit.split('—')[0] }}</span>
+            <span><i class="bi bi-calendar3"></i> {{ dest.popularIntakes[0] }}</span>
+          </div>
+          <div class="dest-card__exams">
+            <span *ngFor="let exam of dest.examsRequired.slice(0, 3)" class="dest-card__exam-tag">{{ exam.split(' ')[0] }}</span>
+          </div>
+          <span class="dest-card__link">Explore {{ dest.name }} <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY STUDY ABROAD ========== -->
+<section class="section section-alt dest-why" id="why-study-abroad">
+  <div class="dest-why__container">
+    <div class="dest-why__header scroll-reveal">
+      <span class="section-label">Why Study Abroad</span>
+      <h2 class="section-title">How Success Learning Supports Your Journey</h2>
+      <div class="gold-line-center"></div>
+    </div>
+    <div class="dest-why__grid">
+      <div class="dest-why__card scroll-reveal stagger-1">
+        <div class="dest-why__card-icon"><i class="bi bi-translate"></i></div>
+        <h4>Language Preparation</h4>
+        <p>IELTS, TOEFL, German, French, Japanese — we prepare you for the language requirements of your chosen country.</p>
+      </div>
+      <div class="dest-why__card scroll-reveal stagger-2">
+        <div class="dest-why__card-icon"><i class="bi bi-clipboard-data"></i></div>
+        <h4>Entrance Exam Coaching</h4>
+        <p>GRE, GMAT, SAT — structured preparation with mock tests and score improvement strategies.</p>
+      </div>
+      <div class="dest-why__card scroll-reveal stagger-3">
+        <div class="dest-why__card-icon"><i class="bi bi-mortarboard"></i></div>
+        <h4>University Selection</h4>
+        <p>Guidance on shortlisting universities based on your profile, budget, and career goals.</p>
+      </div>
+      <div class="dest-why__card scroll-reveal stagger-4">
+        <div class="dest-why__card-icon"><i class="bi bi-file-earmark-text"></i></div>
+        <h4>Application Support</h4>
+        <p>SOP, LOR, resume building, and application form assistance for a strong admission profile.</p>
+      </div>
+      <div class="dest-why__card scroll-reveal stagger-5">
+        <div class="dest-why__card-icon"><i class="bi bi-passport"></i></div>
+        <h4>Visa Guidance</h4>
+        <p>Documentation support, interview preparation, and financial planning for a smooth visa process.</p>
+      </div>
+      <div class="dest-why__card scroll-reveal stagger-6">
+        <div class="dest-why__card-icon"><i class="bi bi-airplane"></i></div>
+        <h4>Pre-Departure Briefing</h4>
+        <p>Travel tips, accommodation guidance, and cultural orientation before you fly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-cta-banner title="Ready to Study Abroad?" subtitle="Book a free consultation to discuss your study abroad plans. We'll help you choose the right country and course."></app-cta-banner>

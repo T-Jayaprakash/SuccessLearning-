@@ -1,0 +1,418 @@
+{
+  "courses": [
+    {
+      "id": "ielts",
+      "slug": "ielts-coaching",
+      "name": "IELTS",
+      "fullName": "IELTS Coaching",
+      "tagline": "International English Language Testing System",
+      "icon": "bi-translate",
+      "color": "#C62828",
+      "shortDescription": "Prepare for IELTS Academic & General Training with expert guidance, mock tests, and personalised feedback to achieve your target band score.",
+      "heroTitle": "IELTS Coaching in Trichy",
+      "heroSubtitle": "Master all four modules — Listening, Reading, Writing & Speaking — with structured coaching and regular mock tests.",
+      "overview": "The International English Language Testing System (IELTS) is the world's most popular English proficiency test for study, work, and migration. At Success Learning, our IELTS programme is designed to help you achieve your target band score through a combination of expert instruction, intensive practice, and personalised feedback. Whether you're aiming for Academic or General Training, our trainers break down each module systematically so you build real confidence.",
+      "whoShouldJoin": [
+        "Students planning to study abroad in the UK, Australia, Canada, or New Zealand",
+        "Working professionals seeking international career opportunities",
+        "Individuals applying for permanent residency or migration",
+        "Anyone needing to demonstrate English proficiency for visa applications"
+      ],
+      "whatYouWillLearn": [
+        "Listening strategies for various question types and accents",
+        "Reading techniques including skimming, scanning, and inference",
+        "Writing Task 1 (reports/letters) and Task 2 (essays) with band-9 structures",
+        "Speaking confidence for all three parts of the interview",
+        "Time management and exam-day strategies",
+        "Vocabulary building for academic and general contexts"
+      ],
+      "methodology": [
+        "Diagnostic test to assess your current level",
+        "Module-wise structured training with daily targets",
+        "Weekly full-length mock tests under exam conditions",
+        "One-on-one speaking practice sessions",
+        "Detailed written feedback on writing tasks",
+        "Error analysis and personalised improvement plan"
+      ],
+      "duration": "4–8 Weeks (based on your level)",
+      "mode": "Online & Offline",
+      "batchSize": "5–8 Students",
+      "highlights": ["Mock Tests", "Speaking Practice", "Writing Review", "Study Materials"],
+      "faqs": [
+        { "question": "What IELTS band score can I expect after the course?", "answer": "Most of our students improve by 1–2 bands. Your final score depends on your starting level, consistency, and practice. We set realistic targets after the diagnostic test." },
+        { "question": "Do you offer both Academic and General Training?", "answer": "Yes, we offer coaching for both IELTS Academic and IELTS General Training modules." },
+        { "question": "How often are mock tests conducted?", "answer": "Full-length mock tests are conducted weekly. Additionally, module-specific practice tests are given after each topic is covered." },
+        { "question": "Can I join if my English is at a beginner level?", "answer": "Yes. We offer a foundation batch for beginners that focuses on building core English skills before moving to IELTS-specific preparation." },
+        { "question": "What materials are provided?", "answer": "We provide Cambridge IELTS practice books, proprietary worksheets, vocabulary lists, and access to online practice resources." }
+      ],
+      "seoTitle": "IELTS Coaching in Trichy | Success Learning — Expert IELTS Training",
+      "seoDescription": "Join Success Learning for expert IELTS coaching in Trichy. Small batches, mock tests, personalised feedback. Thillai Nagar, Trichy. Call 98409 79292."
+    },
+    {
+      "id": "toefl",
+      "slug": "toefl-coaching",
+      "name": "TOEFL",
+      "fullName": "TOEFL Coaching",
+      "tagline": "Test of English as a Foreign Language",
+      "icon": "bi-globe2",
+      "color": "#1565C0",
+      "shortDescription": "Comprehensive TOEFL iBT preparation covering Reading, Listening, Speaking & Writing with computer-based practice.",
+      "heroTitle": "TOEFL Coaching in Trichy",
+      "heroSubtitle": "Score high on TOEFL iBT with structured training, integrated task practice, and computer-based mock tests.",
+      "overview": "TOEFL (Test of English as a Foreign Language) is widely accepted by universities across the USA, Canada, and Europe. At Success Learning, our TOEFL iBT coaching covers all four sections with a focus on the integrated tasks that make TOEFL unique. Our computer-based practice environment ensures you're fully prepared for test day.",
+      "whoShouldJoin": [
+        "Students applying to universities in the USA and Canada",
+        "Professionals seeking English proficiency certification",
+        "Individuals targeting academic programmes requiring TOEFL scores",
+        "Anyone preparing for English-medium higher education abroad"
+      ],
+      "whatYouWillLearn": [
+        "Reading comprehension for academic passages",
+        "Listening skills for lectures and conversations",
+        "Integrated and independent speaking tasks",
+        "Integrated and independent writing with structured responses",
+        "Note-taking strategies for TOEFL format",
+        "Time management for each section"
+      ],
+      "methodology": [
+        "Initial assessment to determine current proficiency",
+        "Section-wise training with progressive difficulty",
+        "Computer-based practice to simulate real TOEFL environment",
+        "Regular timed mock tests with scoring",
+        "Detailed review of speaking recordings and written responses",
+        "Targeted practice for weak areas"
+      ],
+      "duration": "4–6 Weeks",
+      "mode": "Online & Offline",
+      "batchSize": "5–8 Students",
+      "highlights": ["Computer-Based Practice", "Integrated Tasks", "Speaking Recordings", "Score Improvement"],
+      "faqs": [
+        { "question": "What is the difference between TOEFL and IELTS?", "answer": "TOEFL is computer-based and uses American English, while IELTS includes a face-to-face speaking test and uses British English. We help you choose the right test based on your goals." },
+        { "question": "Is TOEFL accepted in India for jobs?", "answer": "TOEFL is primarily used for studying abroad, but some Indian institutions and employers also accept it." },
+        { "question": "Do you provide computer-based practice?", "answer": "Yes, we simulate the actual TOEFL iBT test environment for all mock tests and practice sessions." }
+      ],
+      "seoTitle": "TOEFL Coaching in Trichy | Success Learning — TOEFL iBT Training",
+      "seoDescription": "Expert TOEFL iBT coaching in Trichy at Success Learning. Computer-based practice, mock tests, small batches. Thillai Nagar. Call 98409 79292."
+    },
+    {
+      "id": "gre",
+      "slug": "gre-coaching",
+      "name": "GRE",
+      "fullName": "GRE Coaching",
+      "tagline": "Graduate Record Examination",
+      "icon": "bi-calculator",
+      "color": "#2E7D32",
+      "shortDescription": "Master GRE Verbal, Quantitative & Analytical Writing with strategic problem-solving and timed practice.",
+      "heroTitle": "GRE Coaching in Trichy",
+      "heroSubtitle": "Build strong foundations in Verbal Reasoning, Quantitative Analysis & Analytical Writing for a competitive GRE score.",
+      "overview": "The GRE (Graduate Record Examination) is required by most graduate schools worldwide. Success Learning's GRE programme focuses on building fundamental skills, teaching test-taking strategies, and providing extensive practice. Our trainers simplify complex quantitative concepts and build your vocabulary systematically for lasting improvement.",
+      "whoShouldJoin": [
+        "Students applying for MS or PhD programmes abroad",
+        "Professionals seeking MBA admissions at GRE-accepting schools",
+        "Anyone requiring a strong GRE score for graduate school applications"
+      ],
+      "whatYouWillLearn": [
+        "Verbal Reasoning — vocabulary, text completion, reading comprehension",
+        "Quantitative Reasoning — arithmetic, algebra, geometry, data analysis",
+        "Analytical Writing — Issue and Argument essays",
+        "Adaptive test strategies for the computer-based format",
+        "Time management techniques for each section",
+        "High-frequency GRE vocabulary lists"
+      ],
+      "methodology": [
+        "Diagnostic test and personalised study plan",
+        "Concept-based teaching for quant and verbal",
+        "Weekly sectional tests and full-length mock tests",
+        "Vocabulary building with contextual learning",
+        "Essay review with detailed scoring feedback",
+        "Question-type specific strategy sessions"
+      ],
+      "duration": "6–10 Weeks",
+      "mode": "Online & Offline",
+      "batchSize": "4–6 Students",
+      "highlights": ["Adaptive Test Practice", "Vocabulary Building", "Essay Review", "Strategy Sessions"],
+      "faqs": [
+        { "question": "How long does it take to prepare for GRE?", "answer": "Most students need 2–3 months of consistent preparation. We create a personalised plan based on your target score and starting level." },
+        { "question": "Do you cover both Verbal and Quant equally?", "answer": "Yes, we cover all three sections thoroughly. Students can also opt for focused coaching on their weaker section." },
+        { "question": "What score can I target?", "answer": "After a diagnostic test, we set a realistic target score and create a study plan accordingly. Most of our students score 310+ with dedicated preparation." }
+      ],
+      "seoTitle": "GRE Coaching in Trichy | Success Learning — GRE Training Centre",
+      "seoDescription": "Top GRE coaching in Trichy at Success Learning. Expert trainers, mock tests, small batches. Verbal, Quant & AWA. Thillai Nagar. Call 98409 79292."
+    },
+    {
+      "id": "gmat",
+      "slug": "gmat-coaching",
+      "name": "GMAT",
+      "fullName": "GMAT Coaching",
+      "tagline": "Graduate Management Admission Test",
+      "icon": "bi-graph-up-arrow",
+      "color": "#E65100",
+      "shortDescription": "Strategic GMAT preparation for MBA aspirants covering Quantitative, Verbal, Data Insights & Analytical Writing.",
+      "heroTitle": "GMAT Coaching in Trichy",
+      "heroSubtitle": "Crack the GMAT with expert coaching in Quantitative Reasoning, Verbal Reasoning, Data Insights & Analytical Writing.",
+      "overview": "The GMAT is the gold standard for MBA admissions worldwide. At Success Learning, we focus on building the analytical and critical thinking skills the GMAT demands. Our structured programme covers all sections with adaptive difficulty practice, ensuring you're prepared for the actual test's computer-adaptive format.",
+      "whoShouldJoin": [
+        "MBA aspirants targeting top business schools globally",
+        "Professionals planning career transitions requiring an MBA",
+        "Students seeking competitive GMAT scores for scholarship eligibility"
+      ],
+      "whatYouWillLearn": [
+        "Quantitative Reasoning — problem solving and data sufficiency",
+        "Verbal Reasoning — reading comprehension, critical reasoning, sentence correction",
+        "Data Insights — multi-source reasoning, graphics interpretation, table analysis",
+        "Analytical Writing Assessment — argument analysis essays",
+        "Adaptive test strategies and pacing",
+        "Error log analysis for targeted improvement"
+      ],
+      "methodology": [
+        "Baseline assessment and customised study plan",
+        "Concept-first teaching approach for each section",
+        "Regular adaptive mock tests matching GMAT format",
+        "Detailed score analysis and improvement tracking",
+        "One-on-one doubt clearing sessions",
+        "Focus on high-impact question types"
+      ],
+      "duration": "8–12 Weeks",
+      "mode": "Online & Offline",
+      "batchSize": "4–6 Students",
+      "highlights": ["Adaptive Practice", "Score Analytics", "MBA Guidance", "Small Batches"],
+      "faqs": [
+        { "question": "Is the new GMAT Focus Edition covered?", "answer": "Yes, our curriculum is updated for the GMAT Focus Edition format with its three sections." },
+        { "question": "Can I prepare for GMAT alongside my job?", "answer": "Absolutely. We offer flexible batch timings including weekends and evening sessions." },
+        { "question": "Do you help with MBA applications too?", "answer": "While our primary focus is GMAT preparation, we provide basic guidance on shortlisting schools and application timelines." }
+      ],
+      "seoTitle": "GMAT Coaching in Trichy | Success Learning — GMAT Training",
+      "seoDescription": "Expert GMAT coaching in Trichy at Success Learning. Small batches, adaptive mock tests, score improvement strategies. Thillai Nagar. Call 98409 79292."
+    },
+    {
+      "id": "spoken-english",
+      "slug": "spoken-english",
+      "name": "Spoken English",
+      "fullName": "Spoken English Training",
+      "tagline": "Communicate with Confidence",
+      "icon": "bi-chat-quote",
+      "color": "#6A1B9A",
+      "shortDescription": "Build fluency, confidence and communication skills in English for everyday conversations, interviews, and professional settings.",
+      "heroTitle": "Spoken English Training in Trichy",
+      "heroSubtitle": "From hesitation to fluency — learn to speak English confidently in real-world situations.",
+      "overview": "Our Spoken English programme is designed for students and professionals who want to communicate confidently in English. Unlike grammar-heavy courses, we focus on practical speaking skills — everyday conversations, group discussions, presentations, and interview preparation. Our interactive approach ensures you start speaking from day one.",
+      "whoShouldJoin": [
+        "Students who want to improve their spoken communication",
+        "Working professionals preparing for interviews or presentations",
+        "Homemakers looking to build English-speaking confidence",
+        "Anyone wanting to communicate effectively in English"
+      ],
+      "whatYouWillLearn": [
+        "Pronunciation and intonation improvement",
+        "Vocabulary for daily conversations and professional settings",
+        "Grammar essentials applied in speaking context",
+        "Group discussion and debate skills",
+        "Presentation and public speaking basics",
+        "Interview communication techniques"
+      ],
+      "methodology": [
+        "Interactive sessions — no lectures, all practice",
+        "Role-playing real-world scenarios",
+        "Daily speaking assignments and partner practice",
+        "Pronunciation drills and accent neutralisation",
+        "Confidence-building activities and group discussions",
+        "Regular progress assessments"
+      ],
+      "duration": "4–12 Weeks (multiple levels)",
+      "mode": "Online & Offline",
+      "batchSize": "6–10 Students",
+      "highlights": ["Interactive Sessions", "Daily Practice", "Pronunciation Focus", "Interview Prep"],
+      "faqs": [
+        { "question": "I know English grammar but can't speak fluently. Will this help?", "answer": "Yes, this is exactly what our programme is designed for. We focus on converting your passive knowledge into active speaking skills." },
+        { "question": "Is this suitable for complete beginners?", "answer": "Yes, we have beginner, intermediate, and advanced batches. You'll be placed in the right level after an initial assessment." },
+        { "question": "How soon will I see improvement?", "answer": "Most students notice a significant improvement in confidence and fluency within 3–4 weeks of regular practice." }
+      ],
+      "seoTitle": "Spoken English Classes in Trichy | Success Learning",
+      "seoDescription": "Best spoken English training in Trichy at Success Learning. Interactive sessions, small batches, daily practice. Thillai Nagar. Call 98409 79292."
+    },
+    {
+      "id": "german",
+      "slug": "german-classes",
+      "name": "German",
+      "fullName": "German Language Classes",
+      "tagline": "Learn German — A1 to B2 Levels",
+      "icon": "bi-flag",
+      "color": "#37474F",
+      "shortDescription": "Learn German from A1 to B2 level with structured lessons, conversational practice, and exam preparation for Goethe-Zertifikat.",
+      "heroTitle": "German Language Classes in Trichy",
+      "heroSubtitle": "Master German from basics to advanced — ideal for study in Germany, career opportunities, and Goethe-Zertifikat preparation.",
+      "overview": "Germany is one of the top destinations for higher education and career opportunities. At Success Learning, our German language programme takes you from complete beginner (A1) through to upper-intermediate (B2) level. Our curriculum follows the Common European Framework of Reference (CEFR) and prepares you for Goethe-Zertifikat examinations.",
+      "whoShouldJoin": [
+        "Students planning to study in Germany or Austria",
+        "Professionals targeting jobs in German-speaking countries",
+        "Anyone interested in learning German for personal growth",
+        "Individuals preparing for Goethe-Zertifikat exams"
+      ],
+      "whatYouWillLearn": [
+        "German grammar — from basics to complex sentence structures",
+        "Vocabulary building for everyday and academic contexts",
+        "Listening and comprehension skills",
+        "Speaking and conversational German",
+        "Reading and writing skills as per CEFR levels",
+        "German culture and etiquette essentials"
+      ],
+      "methodology": [
+        "Level-wise structured curriculum (A1, A2, B1, B2)",
+        "Audio-visual learning materials",
+        "Conversational practice in every session",
+        "Regular assessments aligned with Goethe exam patterns",
+        "Cultural context integration for real-world application",
+        "Certificate-level exam preparation"
+      ],
+      "duration": "3–4 Months per level",
+      "mode": "Online & Offline",
+      "batchSize": "5–8 Students",
+      "highlights": ["CEFR Levels", "Goethe Exam Prep", "Conversational Focus", "Cultural Context"],
+      "faqs": [
+        { "question": "Which levels do you offer?", "answer": "We offer A1, A2, B1, and B2 levels following the CEFR framework." },
+        { "question": "Is this useful if I want to study in Germany?", "answer": "Absolutely. Most German universities require B1 or B2 proficiency for admission. Our course prepares you for that." },
+        { "question": "Do you prepare for Goethe-Zertifikat?", "answer": "Yes, our curriculum is aligned with Goethe-Institut exam patterns and we conduct mock tests for exam preparation." }
+      ],
+      "seoTitle": "German Language Classes in Trichy | Success Learning",
+      "seoDescription": "Learn German in Trichy at Success Learning. A1 to B2 levels, Goethe exam preparation, small batches. Thillai Nagar. Call 98409 79292."
+    },
+    {
+      "id": "french",
+      "slug": "french-classes",
+      "name": "French",
+      "fullName": "French Language Classes",
+      "tagline": "Learn French — A1 to B2 Levels",
+      "icon": "bi-flag",
+      "color": "#0D47A1",
+      "shortDescription": "Learn French from A1 to B2 level with conversational practice, cultural context, and DELF/TCF exam preparation.",
+      "heroTitle": "French Language Classes in Trichy",
+      "heroSubtitle": "From bonjour to fluency — structured French language training for study, career, and DELF exam preparation.",
+      "overview": "French is spoken across five continents and opens doors to opportunities in France, Canada, Switzerland, and beyond. Our French language programme covers all four CEFR levels (A1–B2) with a balance of grammar, vocabulary, and conversational skills. We also prepare students for DELF and TCF examinations.",
+      "whoShouldJoin": [
+        "Students planning to study in France or French-speaking countries",
+        "Professionals seeking career opportunities in French-speaking regions",
+        "Anyone interested in learning French for travel or personal enrichment",
+        "Individuals preparing for DELF or TCF exams"
+      ],
+      "whatYouWillLearn": [
+        "French grammar and sentence construction",
+        "Everyday and academic vocabulary",
+        "Listening comprehension for various French accents",
+        "Conversational French for real-life situations",
+        "Reading and writing skills",
+        "French culture, customs, and etiquette"
+      ],
+      "methodology": [
+        "CEFR-aligned curriculum from A1 to B2",
+        "Interactive classroom sessions with speaking focus",
+        "Audio-visual resources and authentic French content",
+        "Regular DELF-pattern mock tests",
+        "Cultural immersion activities",
+        "Progress assessments at each level"
+      ],
+      "duration": "3–4 Months per level",
+      "mode": "Online & Offline",
+      "batchSize": "5–8 Students",
+      "highlights": ["CEFR Levels", "DELF Exam Prep", "Cultural Immersion", "Speaking Focus"],
+      "faqs": [
+        { "question": "Is French useful for career purposes?", "answer": "Yes, French is an official UN language and is widely used in business, diplomacy, and international organisations. Knowing French opens doors in Canada, Switzerland, Belgium, and across Africa." },
+        { "question": "Do you prepare for DELF exams?", "answer": "Yes, we offer specific DELF A1, A2, B1, and B2 exam preparation with mock tests." },
+        { "question": "Can I learn French online?", "answer": "Yes, we offer both online and offline classes with the same curriculum quality." }
+      ],
+      "seoTitle": "French Language Classes in Trichy | Success Learning",
+      "seoDescription": "Learn French in Trichy at Success Learning. A1 to B2 levels, DELF preparation, interactive sessions. Thillai Nagar. Call 98409 79292."
+    },
+    {
+      "id": "japanese",
+      "slug": "japanese-classes",
+      "name": "Japanese",
+      "fullName": "Japanese Language Classes",
+      "tagline": "Learn Japanese — N5 to N3 Levels",
+      "icon": "bi-flag",
+      "color": "#B71C1C",
+      "shortDescription": "Learn Japanese from N5 to N3 level with Hiragana, Katakana, Kanji training, and JLPT exam preparation.",
+      "heroTitle": "Japanese Language Classes in Trichy",
+      "heroSubtitle": "Master Japanese scripts, grammar, and conversation — prepare for JLPT and career opportunities in Japan.",
+      "overview": "Japan offers excellent career and study opportunities, and Japanese language proficiency is increasingly valued. Our programme covers JLPT N5 to N3 levels, starting with Hiragana and Katakana scripts and progressing to Kanji, grammar, and conversational Japanese. We prepare students for the JLPT (Japanese Language Proficiency Test).",
+      "whoShouldJoin": [
+        "Students planning to study or work in Japan",
+        "IT professionals targeting Japanese companies",
+        "Anime and Japanese culture enthusiasts wanting to learn the language",
+        "Anyone preparing for JLPT N5, N4, or N3 exams"
+      ],
+      "whatYouWillLearn": [
+        "Hiragana, Katakana, and essential Kanji",
+        "Japanese grammar and sentence patterns",
+        "Listening and conversational skills",
+        "Reading comprehension for JLPT levels",
+        "Business Japanese basics",
+        "Japanese culture and social etiquette"
+      ],
+      "methodology": [
+        "Script-first approach — master Hiragana and Katakana early",
+        "Progressive grammar introduction with practice drills",
+        "Audio-visual content from native Japanese sources",
+        "JLPT-pattern practice tests at each level",
+        "Conversation sessions for practical application",
+        "Kanji learning with mnemonic techniques"
+      ],
+      "duration": "3–5 Months per level",
+      "mode": "Online & Offline",
+      "batchSize": "5–8 Students",
+      "highlights": ["JLPT Preparation", "Script Training", "Native Content", "Career Japanese"],
+      "faqs": [
+        { "question": "Which JLPT levels do you cover?", "answer": "We currently offer training for JLPT N5, N4, and N3 levels." },
+        { "question": "Is Japanese difficult to learn?", "answer": "Japanese requires learning new scripts, but our structured approach makes it manageable. Most students can hold basic conversations within 3 months." },
+        { "question": "Do you help with Japan placement?", "answer": "While we focus on language training, we provide guidance on study and job opportunities in Japan." }
+      ],
+      "seoTitle": "Japanese Language Classes in Trichy | Success Learning",
+      "seoDescription": "Learn Japanese in Trichy at Success Learning. JLPT preparation, N5 to N3 levels, small batches. Thillai Nagar. Call 98409 79292."
+    },
+    {
+      "id": "pte-oet-duolingo",
+      "slug": "pte-oet-duolingo",
+      "name": "PTE / OET / Duolingo",
+      "fullName": "PTE, OET & Duolingo English Test",
+      "tagline": "Alternative English Proficiency Tests",
+      "icon": "bi-patch-check",
+      "color": "#00695C",
+      "shortDescription": "Preparation for PTE Academic, OET (for healthcare professionals), and Duolingo English Test with focused practice and mock tests.",
+      "heroTitle": "PTE, OET & Duolingo Test Coaching in Trichy",
+      "heroSubtitle": "Flexible English proficiency test preparation — choose the right test for your goals with expert coaching.",
+      "overview": "Beyond IELTS and TOEFL, several English proficiency tests serve specific needs. PTE Academic is fully computer-based and gives fast results. OET is designed for healthcare professionals. The Duolingo English Test is an affordable, convenient option accepted by many universities. At Success Learning, we help you choose the right test and prepare effectively.",
+      "whoShouldJoin": [
+        "Students preferring computer-based testing (PTE)",
+        "Healthcare professionals needing OET certification",
+        "Those seeking a quick, affordable English test (Duolingo)",
+        "Anyone exploring alternatives to IELTS and TOEFL"
+      ],
+      "whatYouWillLearn": [
+        "PTE Academic — all question types across Speaking, Writing, Reading, Listening",
+        "OET — language skills specific to healthcare communication",
+        "Duolingo English Test — adaptive test format and strategies",
+        "Computer-based test-taking skills",
+        "Time management for each test format",
+        "Score-improvement strategies specific to each test"
+      ],
+      "methodology": [
+        "Test-specific focused preparation",
+        "Computer-based practice environment",
+        "Regular mock tests with scoring",
+        "Individual feedback on weak areas",
+        "Practice with authentic test materials",
+        "Flexible batch options for each test"
+      ],
+      "duration": "3–6 Weeks",
+      "mode": "Online & Offline",
+      "batchSize": "4–6 Students",
+      "highlights": ["Computer-Based Practice", "Multiple Test Options", "Fast Results", "Healthcare Focus (OET)"],
+      "faqs": [
+        { "question": "Which test should I take — PTE, IELTS, or Duolingo?", "answer": "It depends on your goals and preferences. We'll help you choose after understanding your requirements and target institutions." },
+        { "question": "Is Duolingo English Test accepted everywhere?", "answer": "Duolingo ET is accepted by many universities, especially in the US. We'll help you verify acceptance for your target institutions." },
+        { "question": "Is OET only for nurses?", "answer": "No, OET covers multiple healthcare professions including medicine, nursing, dentistry, pharmacy, and more." }
+      ],
+      "seoTitle": "PTE, OET & Duolingo Coaching in Trichy | Success Learning",
+      "seoDescription": "PTE Academic, OET & Duolingo English Test coaching in Trichy at Success Learning. Expert preparation, mock tests. Thillai Nagar. Call 98409 79292."
+    }
+  ]
+}

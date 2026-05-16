@@ -1,0 +1,46 @@
+@import 'variables';
+
+.cta-banner {
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  padding: $space-9 0;
+
+  &__container {
+    max-width: $container-max; margin: 0 auto; padding: 0 $container-padding;
+    display: flex; flex-direction: column; align-items: center; text-align: center; gap: $space-6;
+
+    @media (min-width: $bp-lg) {
+      flex-direction: row; justify-content: space-between; text-align: left;
+    }
+  }
+
+  &__title {
+    font-family: $font-primary; font-size: $font-size-2xl; font-weight: $font-weight-bold;
+    color: $color-white; margin-bottom: $space-2;
+  }
+
+  &__subtitle {
+    font-size: $font-size-base; color: rgba(255,255,255,0.75); margin: 0;
+    max-width: 500px;
+  }
+
+  &__actions {
+    display: flex; gap: $space-3; flex-shrink: 0; flex-wrap: wrap; justify-content: center;
+  }
+
+  &__btn {
+    display: inline-flex; align-items: center; gap: $space-2;
+    padding: 0.85rem 2rem; border-radius: $radius-md;
+    font-family: $font-primary; font-weight: $font-weight-semibold; font-size: $font-size-sm;
+    text-decoration: none; transition: all $transition-base; white-space: nowrap;
+
+    &--call {
+      background: $color-accent; color: $color-white;
+      &:hover { background: $color-accent-hover; transform: translateY(-2px); box-shadow: $shadow-lg; color: $color-white; }
+    }
+
+    &--whatsapp {
+      background: #25D366; color: $color-white;
+      &:hover { background: #1da851; transform: translateY(-2px); box-shadow: $shadow-lg; color: $color-white; }
+    }
+  }
+}

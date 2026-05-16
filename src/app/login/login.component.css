@@ -1,0 +1,51 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+label, .btn{
+    font-size: 1.2rem;
+}
+form > div{
+    padding: 0px 25px;
+}
+input{
+    border: 0px;
+    border-bottom: 3px solid #95d8fa;
+    width: 100%;
+    padding: 0px 5px;
+    font-size: 1rem;
+    background-color: transparent;
+}
+input:focus{
+    outline: none;
+}
+.background{
+    background: url(../../assets/SVGs/login_lg_bg.svg); 
+}
+.btn{
+    background: rgb(50,140,225);
+    background: linear-gradient(90deg, rgba(50,140,225,1) 0%, rgba(79,164,244,1) 100%);
+}
+@media only screen and (min-width: 992px) {
+    .card{
+        background-color: transparent;
+        box-shadow: none !important;
+        padding: 0px 25px;
+    }
+    .row{
+        height: 100vh;
+    }
+    .col-lg-6 > h2 {
+        color: white !important;
+    }
+    a{
+        color: white !important;
+    }
+    .col-lg-6 > h2 {
+        margin-bottom: 30px;
+    }
+    .logo{
+        margin-bottom: 100px !important;
+    }
+
+}

@@ -1,0 +1,92 @@
+// ============================================
+// Success Learning — Typography
+// ============================================
+
+@import 'variables';
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  color: $color-text-dark;
+  line-height: $line-height-tight;
+  margin: 0 0 $space-3 0;
+}
+
+h1 {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+
+  @media (min-width: $bp-lg) {
+    font-size: $font-size-4xl;
+  }
+}
+
+h2 {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+
+  @media (min-width: $bp-lg) {
+    font-size: $font-size-3xl;
+  }
+}
+
+h3 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+}
+
+h4 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+}
+
+h5 {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+}
+
+h6 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+}
+
+p {
+  font-family: $font-secondary;
+  font-size: $font-size-base;
+  color: $color-text;
+  line-height: $line-height-base;
+  margin: 0 0 $space-4 0;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.text-accent {
+  color: $color-accent;
+}
+
+.text-muted {
+  color: $color-text-light;
+}
+
+.text-white {
+  color: $color-white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-primary {
+  font-family: $font-primary;
+}
+
+.font-secondary {
+  font-family: $font-secondary;
+}

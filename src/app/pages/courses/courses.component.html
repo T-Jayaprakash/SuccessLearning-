@@ -1,0 +1,57 @@
+<app-page-hero
+  title="Our Courses"
+  subtitle="Comprehensive coaching programmes for international exams and foreign languages."
+  [breadcrumbs]="[{label: 'Courses'}]">
+</app-page-hero>
+
+<section class="section courses-list" id="courses-list">
+  <div class="courses-list__container">
+    <!-- Search & Filter -->
+    <div class="courses-list__toolbar scroll-reveal">
+      <div class="courses-list__search">
+        <i class="bi bi-search"></i>
+        <input type="text" [(ngModel)]="searchQuery" placeholder="Search courses..." id="course-search">
+      </div>
+      <div class="courses-list__filters">
+        <button *ngFor="let f of filters"
+                class="courses-list__filter-btn"
+                [class.active]="activeFilter === f.key"
+                (click)="activeFilter = f.key"
+                [id]="'filter-' + f.key">
+          {{ f.label }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Course Grid -->
+    <div class="courses-list__grid">
+      <a *ngFor="let course of filteredCourses; let i = index"
+         [routerLink]="'/courses/' + course.slug"
+         class="cl-card scroll-reveal stagger-{{i+1}}"
+         [id]="'cl-card-' + course.slug">
+        <div class="cl-card__header">
+          <div class="cl-card__icon" [style.background]="course.color + '12'" [style.color]="course.color">
+            <i class="bi {{course.icon}}"></i>
+          </div>
+          <div class="cl-card__meta">
+            <span class="cl-card__duration"><i class="bi bi-clock"></i> {{ course.duration }}</span>
+            <span class="cl-card__mode"><i class="bi bi-laptop"></i> {{ course.mode }}</span>
+          </div>
+        </div>
+        <h3 class="cl-card__name">{{ course.name }}</h3>
+        <p class="cl-card__desc">{{ course.description }}</p>
+        <div class="cl-card__highlights">
+          <span *ngFor="let h of course.highlights" class="cl-card__tag">{{ h }}</span>
+        </div>
+        <span class="cl-card__link">View Details <i class="bi bi-arrow-right"></i></span>
+      </a>
+    </div>
+
+    <div *ngIf="filteredCourses.length === 0" class="courses-list__empty">
+      <i class="bi bi-search"></i>
+      <p>No courses found matching your search.</p>
+    </div>
+  </div>
+</section>
+
+<app-cta-banner title="Not Sure Which Course?" subtitle="Talk to our team — we'll help you pick the right programme for your goals."></app-cta-banner>

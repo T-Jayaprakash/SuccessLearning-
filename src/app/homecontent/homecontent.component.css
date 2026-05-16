@@ -1,0 +1,101 @@
+h2, h5{
+    font-weight: medium;
+    color: #006994;
+}
+.card{
+    border: 0px;
+    box-shadow: 2px 2px 15px  5px #e1f1fe !important ;
+    border-bottom: 50px;
+}
+.card-body{
+    padding: 20px !important;
+}
+ul li {
+    list-style: none;
+    border: 1px solid #84cdf2;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 20px 5px;
+}
+.dashed-box-1{
+    border: 3px dashed #ffb10b;
+    border-left: 0px;
+}
+.dashed-box-2{
+    border: 2px dashed #ffb10b;
+    border-right: 0px;
+    border-top: 0px;
+}
+.dashed-box-1 > h2, .dashed-box-2 > h2 {
+    width: fit-content;
+    margin-bottom: 0px;
+}
+
+
+/* unknown css properties below*/
+
+#container-width {
+    padding: 20px;
+    border-top: 2px dashed yellow;
+    border-right: 2px dashed yellow;
+    border-bottom: 2px dashed yellow;
+}
+
+#container-width h5{
+    width: fit-content;
+    background-color: #fff;
+    padding-right: 10px;
+}
+
+#container-width1{
+    margin-top: 0px;
+    padding-left: 20px;
+    border-left: 2px dashed yellow;
+    border-bottom: 2px dashed yellow;
+} 
+
+#container-width1 h5{
+    width: fit-content;
+    background-color: #fff;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+@media (max-width: 600px) {
+    #container-width,
+    #container-width1 {
+        border: none; 
+        padding: 20px; 
+    }
+
+    #container-width1 {
+        margin-top: 0; 
+    }
+
+    #width-text h5{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#container-width2 {
+    margin-bottom: 50px;
+}
+
+#carouselExample{
+    margin-top: 20px;
+}
+
+#card-title {
+    font-weight: bold;
+}
+
+#card-para{
+    font-weight: 200;
+    font-size: 14px;
+}
+
+#card{
+    box-shadow: rgba(132, 205, 242, 1) 0px 3px 8px;
+}

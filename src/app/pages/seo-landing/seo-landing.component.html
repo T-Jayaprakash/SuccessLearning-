@@ -1,0 +1,67 @@
+<div *ngIf="page">
+  <app-page-hero [title]="page.heroTitle" [subtitle]="page.heroSubtitle" [breadcrumbs]="[{label: page.title}]"></app-page-hero>
+
+  <!-- Intro -->
+  <section class="section seo-intro" id="seo-intro">
+    <div class="seo-intro__container">
+      <div class="seo-intro__content scroll-reveal">
+        <h2 class="section-title">{{ page.title }}</h2>
+        <div class="gold-line"></div>
+        <p class="seo-intro__text">{{ page.intro }}</p>
+        <div class="seo-intro__actions">
+          <a href="tel:+919840979292" class="btn-primary"><i class="bi bi-telephone-fill"></i> Call 98409 79292</a>
+          <a [routerLink]="'/courses/' + page.courseSlug" class="btn-outline">View Course Details <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section section-alt seo-benefits" id="seo-benefits">
+    <div class="seo-benefits__container">
+      <div class="seo-benefits__header scroll-reveal">
+        <span class="section-label">What You Get</span>
+        <h2 class="section-title">{{ page.courseName }} Coaching Benefits</h2>
+        <div class="gold-line-center"></div>
+      </div>
+      <div class="seo-benefits__grid">
+        <div *ngFor="let b of page.benefits; let i = index" class="seo-benefits__item scroll-reveal stagger-{{i+1}}">
+          <i class="bi bi-check-circle-fill"></i>
+          <span>{{ b }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section seo-why" id="seo-why-us">
+    <div class="seo-why__container">
+      <div class="seo-why__header scroll-reveal">
+        <span class="section-label">Why Success Learning</span>
+        <h2 class="section-title">Why Choose Us for {{ page.courseName }} in Trichy</h2>
+        <div class="gold-line-center"></div>
+      </div>
+      <div class="seo-why__list">
+        <div *ngFor="let w of page.whyUs; let i = index" class="seo-why__item scroll-reveal stagger-{{i+1}}">
+          <div class="seo-why__num">{{ i + 1 }}</div>
+          <p>{{ w }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt seo-faq" id="seo-faq">
+    <div class="seo-faq__container">
+      <div class="seo-faq__header scroll-reveal">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="gold-line-center"></div>
+      </div>
+      <div class="seo-faq__content scroll-reveal">
+        <app-faq-accordion [items]="faqs"></app-faq-accordion>
+      </div>
+    </div>
+  </section>
+
+  <app-cta-banner [title]="'Start ' + page.courseName + ' Coaching Today'" subtitle="Book a free consultation now. Call or WhatsApp us."></app-cta-banner>
+</div>

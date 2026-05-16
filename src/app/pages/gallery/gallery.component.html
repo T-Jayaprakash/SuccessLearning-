@@ -1,0 +1,22 @@
+<app-page-hero title="Gallery" subtitle="A glimpse into our classrooms, events, and student interactions." [breadcrumbs]="[{label: 'Gallery'}]"></app-page-hero>
+
+<section class="section gallery-page" id="gallery-page">
+  <div class="gallery-page__container">
+    <div class="gallery-page__filters scroll-reveal">
+      <button *ngFor="let f of filters" class="gallery-page__filter" [class.active]="activeFilter === f.key" (click)="activeFilter = f.key" [id]="'gallery-filter-' + f.key">{{ f.label }}</button>
+    </div>
+    <div class="gallery-page__grid">
+      <div *ngFor="let img of filteredImages; let i = index" class="gallery-page__item scroll-reveal-scale stagger-{{i+1}}" [id]="'gallery-img-' + i">
+        <img [src]="img.src" [alt]="img.alt" loading="lazy" width="400" height="300">
+        <div class="gallery-page__overlay">
+          <span>{{ img.alt }}</span>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="filteredImages.length === 0" class="gallery-page__empty">
+      <p>No images in this category yet.</p>
+    </div>
+  </div>
+</section>
+
+<app-cta-banner title="Visit Our Centre" subtitle="Come see our classrooms and meet our trainers in person."></app-cta-banner>

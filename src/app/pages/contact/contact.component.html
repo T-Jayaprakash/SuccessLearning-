@@ -1,0 +1,67 @@
+<app-page-hero title="Contact Us" subtitle="Get in touch with us for course enquiries, admissions, or any questions." [breadcrumbs]="[{label: 'Contact'}]"></app-page-hero>
+
+<section class="section contact-page" id="contact-page">
+  <div class="contact-page__container">
+    <!-- Contact Info -->
+    <div class="contact-page__info">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="gold-line"></div>
+      <p>Visit us at our centre in Thillai Nagar or reach out through phone, WhatsApp, or the contact form.</p>
+
+      <div class="contact-page__details">
+        <div class="contact-page__detail"><i class="bi bi-geo-alt-fill"></i><div><strong>Address</strong><span>D73, 7th Cross St W, Thillai Nagar East, North East Extension, Thillai Nagar, Tiruchirappalli, Tamil Nadu 620018</span></div></div>
+        <div class="contact-page__detail"><i class="bi bi-telephone-fill"></i><div><strong>Phone</strong><a href="tel:+919840979292">98409 79292</a></div></div>
+        <div class="contact-page__detail"><i class="bi bi-whatsapp"></i><div><strong>WhatsApp</strong><a href="https://wa.me/919840979292" target="_blank" rel="noopener">Chat on WhatsApp</a></div></div>
+        <div class="contact-page__detail"><i class="bi bi-clock-fill"></i><div><strong>Working Hours</strong><span>Monday – Saturday: 9:00 AM – 8:00 PM<br>Sunday: Closed</span></div></div>
+      </div>
+
+      <div class="contact-page__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8471055462032!2d78.69060467912901!3d10.82301029593393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf559a644cfe9%3A0x89223ee9600656c5!2sSuccess%20Learning%20-%20IELTS%2CTOEFL%2CSpoken%20English%2CCommunication%20English%2C%20GRE%2C%20GMAT%20Training%20and%20Coaching%20Centre%20in%20Trichy!5e0!3m2!1sen!2sin!4v1705492727851!5m2!1sen!2sin" width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Success Learning Location"></iframe>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-page__form-wrapper">
+      <div class="contact-page__form-card">
+        <h3>Send Us a Message</h3>
+        <p>We'll get back to you within 24 hours.</p>
+        <form (ngSubmit)="onSubmit()" class="contact-page__form" id="contact-form">
+          <div class="contact-page__field">
+            <label for="contact-name">Full Name *</label>
+            <input type="text" id="contact-name" [(ngModel)]="formData.name" name="name" required placeholder="Your name">
+          </div>
+          <div class="contact-page__field">
+            <label for="contact-email">Email *</label>
+            <input type="email" id="contact-email" [(ngModel)]="formData.email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="contact-page__field">
+            <label for="contact-phone">Phone</label>
+            <input type="tel" id="contact-phone" [(ngModel)]="formData.phone" name="phone" placeholder="Your phone number">
+          </div>
+          <div class="contact-page__field">
+            <label for="contact-course">Interested Course</label>
+            <select id="contact-course" [(ngModel)]="formData.course" name="course">
+              <option value="">Select a course</option>
+              <option *ngFor="let c of courseOptions" [value]="c">{{ c }}</option>
+            </select>
+          </div>
+          <div class="contact-page__field">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" [(ngModel)]="formData.message" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary contact-page__submit" [disabled]="isSubmitting" id="contact-submit">
+            <i *ngIf="!isSubmitting" class="bi bi-send"></i>
+            <i *ngIf="isSubmitting" class="bi bi-arrow-repeat"></i>
+            {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+          </button>
+          <div *ngIf="submitStatus === 'success'" class="contact-page__status contact-page__status--success">
+            <i class="bi bi-check-circle-fill"></i> Message sent successfully! We'll get back to you soon.
+          </div>
+          <div *ngIf="submitStatus === 'error'" class="contact-page__status contact-page__status--error">
+            <i class="bi bi-exclamation-circle-fill"></i> Something went wrong. Please try again or call us directly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

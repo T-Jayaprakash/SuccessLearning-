@@ -1,0 +1,221 @@
+<!-- ========== HERO SECTION ========== -->
+<section class="hero" id="hero-section">
+  <div class="hero__container">
+    <div class="hero__content">
+      <div class="hero__badge">
+        <i class="bi bi-star-fill"></i>
+        <span>4.8 Rating · 22+ Google Reviews</span>
+      </div>
+      <h1 class="hero__title">
+        Learn Languages &amp; Crack International Exams
+        <span class="hero__title-accent">with Confidence</span>
+      </h1>
+      <p class="hero__subtitle">
+        IELTS, TOEFL, GRE, GMAT, Spoken English, German, French, Japanese &amp; More — Expert Coaching in Trichy.
+      </p>
+      <div class="hero__actions">
+        <a href="https://wa.me/919840979292?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%20consultation" target="_blank" rel="noopener" class="hero__btn hero__btn--primary" id="hero-cta-consult">
+          <i class="bi bi-calendar-check"></i> Book Free Consultation
+        </a>
+        <a routerLink="/courses" class="hero__btn hero__btn--outline" id="hero-cta-courses">
+          <i class="bi bi-grid-3x3-gap"></i> Explore Courses
+        </a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__image-wrapper">
+        <img src="assets/images/IMG-20231227-WA0003.jpg" alt="Students learning at Success Learning classroom in Trichy" class="hero__image" width="560" height="400" loading="eager">
+        <div class="hero__floating-card hero__floating-card--top">
+          <i class="bi bi-people-fill"></i>
+          <div><strong>500+</strong><span>Students Trained</span></div>
+        </div>
+        <div class="hero__floating-card hero__floating-card--bottom">
+          <i class="bi bi-trophy-fill"></i>
+          <div><strong>Expert</strong><span>Certified Trainers</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TRUST BAR ========== -->
+<section class="trust-bar scroll-reveal" id="trust-bar">
+  <div class="trust-bar__container">
+    <div *ngFor="let item of trustItems; let i = index" class="trust-bar__item stagger-{{i + 1}}">
+      <i class="bi {{item.icon}} trust-bar__icon"></i>
+      <span class="trust-bar__label">{{ item.label }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== POPULAR COURSES ========== -->
+<section class="section courses-section" id="courses-section">
+  <div class="courses-section__container">
+    <div class="courses-section__header scroll-reveal">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Popular Courses</h2>
+      <div class="gold-line"></div>
+      <p class="section-subtitle">From international exam preparation to foreign language training — we cover everything you need to succeed.</p>
+    </div>
+    <div class="courses-section__grid">
+      <a *ngFor="let course of courses; let i = index"
+         [routerLink]="'/courses/' + course.slug"
+         class="course-card scroll-reveal stagger-{{i + 1}}"
+         [id]="'course-card-' + course.slug">
+        <div class="course-card__icon" [style.background]="course.color + '12'" [style.color]="course.color">
+          <i class="bi {{course.icon}}"></i>
+        </div>
+        <h3 class="course-card__name">{{ course.name }}</h3>
+        <p class="course-card__desc">{{ course.description }}</p>
+        <span class="course-card__link">
+          Learn More <i class="bi bi-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STUDY DESTINATIONS PREVIEW ========== -->
+<section class="section section-alt destinations-preview" id="destinations-preview">
+  <div class="destinations-preview__container">
+    <div class="destinations-preview__header scroll-reveal">
+      <span class="section-label">Study Abroad</span>
+      <h2 class="section-title">Popular Study Destinations</h2>
+      <div class="gold-line-center"></div>
+      <p class="section-subtitle">We help you prepare for studying in the world's top education destinations.</p>
+    </div>
+    <div class="destinations-preview__scroll">
+      <a *ngFor="let dest of topDestinations; let i = index"
+         [routerLink]="'/study-abroad/' + dest.slug"
+         class="dest-preview-card scroll-reveal stagger-{{i+1}}"
+         [id]="'dest-preview-' + dest.slug">
+        <div class="dest-preview-card__image">
+          <img [src]="dest.image" [alt]="'Study in ' + dest.name" loading="lazy" width="300" height="200">
+          <span class="dest-preview-card__flag">{{ dest.flag }}</span>
+        </div>
+        <div class="dest-preview-card__body">
+          <h3>{{ dest.name }}</h3>
+          <p>{{ dest.tagline }}</p>
+        </div>
+      </a>
+    </div>
+    <div class="destinations-preview__action scroll-reveal">
+      <a routerLink="/study-abroad" class="btn-outline" id="destinations-view-all">
+        Explore All Destinations <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT PREVIEW ========== -->
+<section class="section section-alt about-preview" id="about-preview">
+  <div class="about-preview__container">
+    <div class="about-preview__image scroll-reveal-left">
+      <img src="assets/images/about-pic.jpg" alt="Success Learning centre in Thillai Nagar, Trichy" width="520" height="400" loading="lazy">
+      <div class="about-preview__experience">
+        <span class="about-preview__exp-number">Years of</span>
+        <span class="about-preview__exp-text">Trusted Coaching</span>
+      </div>
+    </div>
+    <div class="about-preview__content scroll-reveal-right">
+      <span class="section-label">About Us</span>
+      <h2 class="section-title">About Success Learning</h2>
+      <div class="gold-line"></div>
+      <p>Located in <strong>Thillai Nagar, Trichy</strong>, Success Learning is a coaching centre built on one principle — every student deserves quality, personalised training that actually works.</p>
+      <p>We focus on practical learning, not just theory. Whether you're preparing for IELTS, learning German, or building spoken English confidence — our approach is hands-on, exam-focused, and tailored to your pace.</p>
+      <ul class="about-preview__points">
+        <li><i class="bi bi-check-circle-fill"></i> Practical learning approach with real-world application</li>
+        <li><i class="bi bi-check-circle-fill"></i> Communication improvement alongside exam preparation</li>
+        <li><i class="bi bi-check-circle-fill"></i> Personal attention with small batch sizes</li>
+        <li><i class="bi bi-check-circle-fill"></i> Flexible timings for students and working professionals</li>
+      </ul>
+      <a routerLink="/about" class="btn-primary" id="about-learn-more">
+        Learn More About Us <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY CHOOSE US ========== -->
+<section class="section why-us" id="why-choose-us">
+  <div class="why-us__container">
+    <div class="why-us__header scroll-reveal">
+      <span class="section-label">Why Students Trust Us</span>
+      <h2 class="section-title">Why Choose Success Learning</h2>
+      <div class="gold-line-center"></div>
+    </div>
+    <div class="why-us__grid">
+      <div *ngFor="let item of whyChooseUs; let i = index" class="why-us__card scroll-reveal stagger-{{i + 1}}">
+        <div class="why-us__card-icon">
+          <i class="bi {{item.icon}}"></i>
+        </div>
+        <h4 class="why-us__card-title">{{ item.title }}</h4>
+        <p class="why-us__card-desc">{{ item.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="section section-alt testimonials" id="testimonials-section">
+  <div class="testimonials__container">
+    <div class="testimonials__header scroll-reveal">
+      <span class="section-label">Student Voices</span>
+      <h2 class="section-title">What Our Students Say</h2>
+      <div class="gold-line-center"></div>
+    </div>
+    <div class="testimonials__slider scroll-reveal">
+      <div class="testimonials__card">
+        <div class="testimonials__stars">
+          <i *ngFor="let s of getStars(testimonials[currentTestimonial].rating)" class="bi bi-star-fill"></i>
+        </div>
+        <p class="testimonials__text">"{{ testimonials[currentTestimonial].text }}"</p>
+        <div class="testimonials__author">
+          <div class="testimonials__avatar">{{ getInitials(testimonials[currentTestimonial].name) }}</div>
+          <div>
+            <strong class="testimonials__name">{{ testimonials[currentTestimonial].name }}</strong>
+            <span class="testimonials__role">{{ testimonials[currentTestimonial].designation }}</span>
+            <span *ngIf="testimonials[currentTestimonial].score" class="testimonials__score">
+              {{ testimonials[currentTestimonial].course }} · {{ testimonials[currentTestimonial].score }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials__nav">
+        <button (click)="prevTestimonial()" class="testimonials__nav-btn" aria-label="Previous testimonial" id="testimonial-prev">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <div class="testimonials__dots">
+          <span *ngFor="let t of testimonials; let i = index"
+                class="testimonials__dot" [class.active]="i === currentTestimonial"
+                (click)="currentTestimonial = i"></span>
+        </div>
+        <button (click)="nextTestimonial()" class="testimonials__nav-btn" aria-label="Next testimonial" id="testimonial-next">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALLERY PREVIEW ========== -->
+<section class="section gallery-preview" id="gallery-preview">
+  <div class="gallery-preview__container">
+    <div class="gallery-preview__header scroll-reveal">
+      <span class="section-label">Our Centre</span>
+      <h2 class="section-title">Life at Success Learning</h2>
+      <div class="gold-line-center"></div>
+    </div>
+    <div class="gallery-preview__grid scroll-reveal">
+      <div *ngFor="let img of galleryImages; let i = index" class="gallery-preview__item stagger-{{i + 1}}">
+        <img [src]="img.src" [alt]="img.alt" loading="lazy" width="380" height="260">
+      </div>
+    </div>
+    <div class="gallery-preview__action scroll-reveal">
+      <a routerLink="/gallery" class="btn-outline" id="gallery-view-all">View Full Gallery <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA BANNER ========== -->
+<app-cta-banner></app-cta-banner>

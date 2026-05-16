@@ -1,0 +1,163 @@
+<div *ngIf="dest">
+  <!-- Hero -->
+  <section class="dd-hero" [id]="'dd-hero-' + dest.slug">
+    <img [src]="dest.image" [alt]="'Study in ' + dest.name" class="dd-hero__bg" loading="eager">
+    <div class="dd-hero__overlay"></div>
+    <div class="dd-hero__container">
+      <nav class="dd-hero__breadcrumb">
+        <a routerLink="/">Home</a> / <a routerLink="/study-abroad">Study Abroad</a> / <span>{{ dest.name }}</span>
+      </nav>
+      <span class="dd-hero__flag">{{ dest.flag }}</span>
+      <h1 class="dd-hero__title">Study in {{ dest.name }}</h1>
+      <p class="dd-hero__subtitle">{{ dest.tagline }}</p>
+    </div>
+  </section>
+
+  <!-- Quick Facts Bar -->
+  <div class="dd-facts" id="dd-facts">
+    <div class="dd-facts__container">
+      <div class="dd-facts__item"><i class="bi bi-cash-stack"></i><div><strong>Tuition</strong><span>{{ dest.tuition }}</span></div></div>
+      <div class="dd-facts__item"><i class="bi bi-briefcase"></i><div><strong>Work Permit</strong><span>{{ dest.workPermit }}</span></div></div>
+      <div class="dd-facts__item"><i class="bi bi-calendar3"></i><div><strong>Main Intake</strong><span>{{ dest.popularIntakes[0] }}</span></div></div>
+      <div class="dd-facts__item dd-facts__item--cta">
+        <a href="https://wa.me/919840979292?text=Hi%2C%20I%20want%20to%20study%20in%20{{dest.name}}" target="_blank" rel="noopener" class="btn-primary">
+          <i class="bi bi-whatsapp"></i> Get Free Counselling
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section dd-about" id="dd-about">
+    <div class="dd-about__container">
+      <div class="dd-about__content scroll-reveal">
+        <span class="section-label">About Studying in {{ dest.name }}</span>
+        <h2 class="section-title">Why {{ dest.name }}?</h2>
+        <div class="gold-line"></div>
+        <p>{{ dest.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Universities -->
+  <section class="section section-alt dd-unis" id="dd-universities">
+    <div class="dd-unis__container">
+      <div class="dd-unis__header scroll-reveal">
+        <span class="section-label">Top Universities</span>
+        <h2 class="section-title">Top Universities in {{ dest.name }}</h2>
+        <div class="gold-line-center"></div>
+      </div>
+      <div class="dd-unis__grid">
+        <div *ngFor="let uni of dest.topUniversities; let i = index" class="dd-unis__item scroll-reveal stagger-{{i+1}}">
+          <i class="bi bi-building"></i>
+          <span>{{ uni }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Courses & Benefits -->
+  <section class="section dd-courses-benefits" id="dd-courses-benefits">
+    <div class="dd-courses-benefits__container">
+      <div class="dd-courses-benefits__col scroll-reveal-left">
+        <span class="section-label">Popular Courses</span>
+        <h2 class="section-title">In-Demand Programs</h2>
+        <div class="gold-line"></div>
+        <ul class="dd-list dd-list--courses">
+          <li *ngFor="let course of dest.popularCourses"><i class="bi bi-mortarboard"></i> {{ course }}</li>
+        </ul>
+      </div>
+      <div class="dd-courses-benefits__col scroll-reveal-right">
+        <span class="section-label">Why Study Here</span>
+        <h2 class="section-title">Key Benefits</h2>
+        <div class="gold-line"></div>
+        <ul class="dd-list dd-list--benefits">
+          <li *ngFor="let benefit of dest.benefits"><i class="bi bi-check-circle-fill"></i> {{ benefit }}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exams Required -->
+  <section class="section section-alt dd-exams" id="dd-exams">
+    <div class="dd-exams__container">
+      <div class="dd-exams__header scroll-reveal">
+        <span class="section-label">Preparation Required</span>
+        <h2 class="section-title">Exams Required for {{ dest.name }}</h2>
+        <div class="gold-line-center"></div>
+        <p class="section-subtitle">We coach you for all these exams at Success Learning.</p>
+      </div>
+      <div class="dd-exams__grid">
+        <div *ngFor="let exam of dest.examsRequired; let i = index" class="dd-exams__item scroll-reveal stagger-{{i+1}}">
+          <i class="bi bi-patch-check-fill"></i>
+          <span>{{ exam }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visa & Career -->
+  <section class="section dd-visa-career" id="dd-visa-career">
+    <div class="dd-visa-career__container">
+      <div class="dd-visa-career__col scroll-reveal-left">
+        <span class="section-label">Visa Guidance</span>
+        <h2 class="section-title">Visa Process</h2>
+        <div class="gold-line"></div>
+        <p>{{ dest.visaGuidance }}</p>
+      </div>
+      <div class="dd-visa-career__col scroll-reveal-right">
+        <span class="section-label">After Graduation</span>
+        <h2 class="section-title">Career Opportunities</h2>
+        <div class="gold-line"></div>
+        <ul class="dd-list dd-list--careers">
+          <li *ngFor="let career of dest.careerOpportunities"><i class="bi bi-arrow-right-circle-fill"></i> {{ career }}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Lifestyle -->
+  <section class="section section-alt dd-lifestyle" id="dd-lifestyle">
+    <div class="dd-lifestyle__container scroll-reveal">
+      <span class="section-label">Student Life</span>
+      <h2 class="section-title">Student Lifestyle in {{ dest.name }}</h2>
+      <div class="gold-line"></div>
+      <p>{{ dest.studentLifestyle }}</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section dd-faq" id="dd-faq">
+    <div class="dd-faq__container">
+      <div class="dd-faq__header scroll-reveal">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="gold-line-center"></div>
+      </div>
+      <div class="dd-faq__content scroll-reveal">
+        <app-faq-accordion [items]="faqs"></app-faq-accordion>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Destinations -->
+  <section class="section section-alt dd-related" id="dd-related">
+    <div class="dd-related__container">
+      <div class="dd-related__header scroll-reveal">
+        <h2 class="section-title">Explore Other Destinations</h2>
+        <div class="gold-line-center"></div>
+      </div>
+      <div class="dd-related__grid">
+        <a *ngFor="let rd of relatedDestinations" [routerLink]="'/study-abroad/' + rd.slug" class="dd-related__card scroll-reveal">
+          <img [src]="rd.image" [alt]="'Study in ' + rd.name" loading="lazy">
+          <div class="dd-related__info">
+            <span class="dd-related__flag">{{ rd.flag }}</span>
+            <strong>{{ rd.name }}</strong>
+            <span class="dd-related__tagline">{{ rd.tagline }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <app-cta-banner [title]="'Start Your ' + dest.name + ' Journey'" subtitle="Book a free consultation today. Call or WhatsApp us."></app-cta-banner>
+</div>

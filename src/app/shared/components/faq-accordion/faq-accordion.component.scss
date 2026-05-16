@@ -1,0 +1,31 @@
+@import 'variables';
+
+.faq-accordion {
+  &__item {
+    border: 1px solid $color-border; border-radius: $radius-lg; margin-bottom: $space-3;
+    overflow: hidden; transition: border-color $transition-base;
+    &.open { border-color: $color-accent; }
+  }
+
+  &__trigger {
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+    padding: $space-4 $space-5; background: $color-white; border: none; cursor: pointer;
+    font-family: $font-primary; font-size: $font-size-base; font-weight: $font-weight-medium;
+    color: $color-text-dark; text-align: left; transition: background $transition-fast;
+    gap: $space-3;
+    &:hover { background: $color-bg; }
+  }
+
+  &__icon { font-size: 20px; color: $color-accent; flex-shrink: 0; }
+
+  &__body {
+    max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 $space-5;
+    &.open { max-height: 300px; padding: 0 $space-5 $space-4; }
+  }
+
+  &__answer {
+    font-family: $font-secondary; font-size: $font-size-sm; color: $color-text-light;
+    line-height: $line-height-relaxed; margin: 0;
+  }
+}
