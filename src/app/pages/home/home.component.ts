@@ -5,7 +5,7 @@ import { DESTINATIONS, Destination } from '../../core/data/destinations.data';
 
 interface Course {
   name: string;
-  icon: string;
+  image: string;
   color: string;
   slug: string;
   description: string;
@@ -36,15 +36,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ];
 
   courses: Course[] = [
-    { name: 'IELTS', icon: 'bi-translate', color: '#C62828', slug: 'ielts-coaching', description: 'Achieve your target band score with expert coaching and regular mock tests.' },
-    { name: 'TOEFL', icon: 'bi-globe2', color: '#1565C0', slug: 'toefl-coaching', description: 'Computer-based TOEFL iBT preparation with integrated task practice.' },
-    { name: 'GRE', icon: 'bi-calculator', color: '#2E7D32', slug: 'gre-coaching', description: 'Master Verbal, Quantitative & Analytical Writing for a competitive score.' },
-    { name: 'GMAT', icon: 'bi-graph-up-arrow', color: '#E65100', slug: 'gmat-coaching', description: 'Strategic GMAT prep for MBA aspirants with adaptive practice.' },
-    { name: 'Spoken English', icon: 'bi-chat-quote', color: '#6A1B9A', slug: 'spoken-english', description: 'Build fluency and confidence for conversations, interviews & presentations.' },
-    { name: 'German', icon: 'bi-flag', color: '#37474F', slug: 'german-classes', description: 'A1 to B2 levels with Goethe-Zertifikat exam preparation.' },
-    { name: 'French', icon: 'bi-flag', color: '#0D47A1', slug: 'french-classes', description: 'A1 to B2 levels with DELF exam preparation and cultural context.' },
-    { name: 'Japanese', icon: 'bi-flag', color: '#B71C1C', slug: 'japanese-classes', description: 'N5 to N3 levels with JLPT preparation and script training.' },
-    { name: 'PTE / OET / Duolingo', icon: 'bi-patch-check', color: '#00695C', slug: 'pte-oet-duolingo', description: 'Flexible English proficiency test preparation with mock tests.' },
+    { name: 'IELTS', image: 'assets/images/courses/ielts.jpg', color: '#C62828', slug: 'ielts-coaching', description: 'Achieve your target band score with expert coaching and regular mock tests.' },
+    { name: 'TOEFL', image: 'assets/images/courses/toefl.jpg', color: '#1565C0', slug: 'toefl-coaching', description: 'Computer-based TOEFL iBT preparation with integrated task practice.' },
+    { name: 'GRE', image: 'assets/images/courses/gre.jpg', color: '#2E7D32', slug: 'gre-coaching', description: 'Master Verbal, Quantitative & Analytical Writing for a competitive score.' },
+    { name: 'GMAT', image: 'assets/images/courses/gmat.jpg', color: '#E65100', slug: 'gmat-coaching', description: 'Strategic GMAT prep for MBA aspirants with adaptive practice.' },
+    { name: 'Spoken English', image: 'assets/images/courses/spoken-english.jpg', color: '#6A1B9A', slug: 'spoken-english', description: 'Build fluency and confidence for conversations, interviews & presentations.' },
+    { name: 'German', image: 'assets/images/courses/german.jpg', color: '#37474F', slug: 'german-classes', description: 'A1 to B2 levels with Goethe-Zertifikat exam preparation.' },
+    { name: 'French', image: 'assets/images/courses/french.jpg', color: '#0D47A1', slug: 'french-classes', description: 'A1 to B2 levels with DELF exam preparation and cultural context.' },
+    { name: 'Japanese', image: 'assets/images/courses/japanese.jpg', color: '#B71C1C', slug: 'japanese-classes', description: 'N5 to N3 levels with JLPT preparation and script training.' },
+    { name: 'PTE / OET / Duolingo', image: 'assets/images/courses/pte-oet.jpg', color: '#00695C', slug: 'pte-oet-duolingo', description: 'Flexible English proficiency test preparation with mock tests.' },
   ];
 
   whyChooseUs = [

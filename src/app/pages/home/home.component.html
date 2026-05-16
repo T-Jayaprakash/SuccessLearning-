@@ -62,14 +62,16 @@
          [routerLink]="'/courses/' + course.slug"
          class="course-card scroll-reveal stagger-{{i + 1}}"
          [id]="'course-card-' + course.slug">
-        <div class="course-card__icon" [style.background]="course.color + '12'" [style.color]="course.color">
-          <i class="bi {{course.icon}}"></i>
+        <div class="course-card__image">
+          <img [src]="course.image" [alt]="course.name" loading="lazy">
         </div>
-        <h3 class="course-card__name">{{ course.name }}</h3>
-        <p class="course-card__desc">{{ course.description }}</p>
-        <span class="course-card__link">
-          Learn More <i class="bi bi-arrow-right"></i>
-        </span>
+        <div class="course-card__body">
+          <h3 class="course-card__name">{{ course.name }}</h3>
+          <p class="course-card__desc">{{ course.description }}</p>
+          <span class="course-card__link" [style.color]="course.color">
+            Learn More <i class="bi bi-arrow-right"></i>
+          </span>
+        </div>
       </a>
     </div>
   </div>
