@@ -22,7 +22,7 @@ export interface Destination {
 export const DESTINATIONS: Destination[] = [
   {
     slug: 'canada', name: 'Canada', flag: '🇨🇦',
-    image: 'assets/images/destinations/canada.png',
+    image: 'https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=1000&auto=format&fit=crop',
     tagline: 'Affordable education with excellent PR pathways',
     description: 'Canada is the #1 choice for Indian students seeking quality education with permanent residency opportunities. With world-renowned universities, multicultural cities, and a strong post-graduation work permit system, Canada offers an unbeatable combination of education and career prospects.',
     tuition: 'Moderate', workPermit: 'Post-Graduation Work Permit (PGWP) — Up to 3 years',
@@ -39,7 +39,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     slug: 'united-kingdom', name: 'United Kingdom', flag: '🇬🇧',
-    image: 'assets/images/destinations/uk.png',
+    image: 'https://images.unsplash.com/photo-1582296066228-569668388414?q=80&w=1000&auto=format&fit=crop',
     tagline: 'World-class education with rich academic heritage',
     description: 'The United Kingdom is home to some of the oldest and most prestigious universities in the world. With shorter course durations (1-year Masters), a Graduate Route visa, and globally respected degrees, the UK remains a top destination for ambitious students.',
     tuition: 'Premium', workPermit: 'Graduate Route — 2 years post-study work visa',
@@ -56,7 +56,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     slug: 'united-states', name: 'United States', flag: '🇺🇸',
-    image: 'assets/images/destinations/usa.png',
+    image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1000&auto=format&fit=crop',
     tagline: 'Innovation hub with unmatched research opportunities',
     description: 'The United States hosts the largest number of international students worldwide. With cutting-edge research facilities, diverse program offerings, and Optional Practical Training (OPT) opportunities, the US is the ultimate destination for those seeking academic excellence and career growth.',
     tuition: 'Premium', workPermit: 'OPT — 12 months (STEM: 36 months)',
@@ -73,7 +73,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     slug: 'australia', name: 'Australia', flag: '🇦🇺',
-    image: 'assets/images/destinations/australia.png',
+    image: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=1000&auto=format&fit=crop',
     tagline: 'High quality of life with excellent post-study work options',
     description: 'Australia combines world-class education with an enviable lifestyle. Known for its welcoming culture, strong student support systems, and generous post-study work rights, Australia is a top choice for Indian students seeking education and long-term career opportunities.',
     tuition: 'Moderate', workPermit: 'Post-Study Work Visa — 2–4 years',
@@ -90,7 +90,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     slug: 'germany', name: 'Germany', flag: '🇩🇪',
-    image: 'assets/images/destinations/germany.png',
+    image: 'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=1000&auto=format&fit=crop',
     tagline: 'Tuition-free public universities with engineering excellence',
     description: 'Germany is Europe\'s economic powerhouse and a dream destination for engineering and technology students. Most public universities charge zero or minimal tuition fees, making it an incredibly cost-effective option for quality European education.',
     tuition: 'Affordable', workPermit: '18-month Job Seeker Visa after graduation',
@@ -107,7 +107,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     slug: 'france', name: 'France', flag: '🇫🇷',
-    image: 'assets/images/destinations/france.png',
+    image: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1000&auto=format&fit=crop',
     tagline: 'Culture, cuisine, and globally respected degrees',
     description: 'France offers a unique blend of academic excellence, cultural richness, and affordable education. With programs available in both French and English, subsidised tuition at public universities, and a vibrant student lifestyle, France attracts students from around the world.',
     tuition: 'Affordable', workPermit: 'Post-study work permit — 1–2 years',
@@ -124,7 +124,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     slug: 'ireland', name: 'Ireland', flag: '🇮🇪',
-    image: 'assets/images/destinations/ireland.png',
+    image: 'https://images.unsplash.com/photo-1590130651147-386baf0f3fde?q=80&w=1000&auto=format&fit=crop',
     tagline: 'English-speaking European hub with strong tech industry',
     description: 'Ireland has emerged as a top study destination, especially for IT and business students. As the European headquarters for tech giants like Google, Apple, and Facebook, Ireland offers excellent post-study career prospects in a welcoming, English-speaking environment.',
     tuition: 'Moderate', workPermit: 'Stay Back Visa — 1–2 years',
@@ -141,7 +141,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     slug: 'new-zealand', name: 'New Zealand', flag: '🇳🇿',
-    image: 'assets/images/destinations/newzealand.png',
+    image: 'https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=1000&auto=format&fit=crop',
     tagline: 'Safe, scenic, and globally recognised education',
     description: 'New Zealand offers a unique combination of world-class education, stunning natural beauty, and a safe, friendly environment. All eight universities rank in the global top 500, and the country provides strong post-study work opportunities.',
     tuition: 'Moderate', workPermit: 'Post-Study Work Visa — 1–3 years',
@@ -158,7 +158,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     slug: 'singapore', name: 'Singapore', flag: '🇸🇬',
-    image: 'assets/images/destinations/singapore.png',
+    image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=1000&auto=format&fit=crop',
     tagline: 'Asia\'s education powerhouse with global career access',
     description: 'Singapore is a world-class education hub that combines Asian values with global standards. With top-ranked universities, a strategic location, and strong industry connections, Singapore is ideal for students who want an Asian base with international exposure.',
     tuition: 'Moderate', workPermit: 'Long-Term Visit Pass for job search',
@@ -175,7 +175,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     slug: 'dubai-uae', name: 'Dubai / UAE', flag: '🇦🇪',
-    image: 'assets/images/destinations/dubai.png',
+    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1000&auto=format&fit=crop',
     tagline: 'Tax-free careers and branch campuses of global universities',
     description: 'Dubai and the UAE have rapidly emerged as a study destination offering branch campuses of top international universities, tax-free career opportunities, and a cosmopolitan lifestyle. With a growing economy and strategic location, the UAE is ideal for business and technology students.',
     tuition: 'Moderate', workPermit: 'Post-study work permit available',
@@ -192,7 +192,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     slug: 'japan', name: 'Japan', flag: '🇯🇵',
-    image: 'assets/images/destinations/japan.png',
+    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1000&auto=format&fit=crop',
     tagline: 'Technology innovation meets ancient culture',
     description: 'Japan combines cutting-edge technology with ancient cultural traditions. With government-funded scholarships (MEXT), affordable tuition, and increasing English-taught programs, Japan is becoming an attractive destination for students interested in technology, engineering, and Japanese culture.',
     tuition: 'Affordable', workPermit: 'Designated Activities Visa for job search — 6 months',
