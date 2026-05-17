@@ -29,16 +29,15 @@
          [routerLink]="'/courses/' + course.slug"
          class="course-card-premium scroll-reveal stagger-{{i+1}}"
          [id]="'course-card-' + course.slug">
-        <div class="course-card-premium__bg">
+        <div class="course-card-premium__image">
           <img [src]="course.image" [alt]="course.name" loading="lazy">
-          <div class="course-card-premium__overlay"></div>
         </div>
         <div class="course-card-premium__content">
           <h3 class="course-card-premium__name">{{ course.name }}</h3>
           <p class="course-card-premium__desc">{{ course.description }}</p>
           <div class="course-card-premium__footer">
             <span class="course-card-premium__link" [style.color]="course.color">
-              View Details <i class="bi bi-arrow-right"></i>
+              Learn More <i class="bi bi-arrow-right"></i>
             </span>
           </div>
         </div>
