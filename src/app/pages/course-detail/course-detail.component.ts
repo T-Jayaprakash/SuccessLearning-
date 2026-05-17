@@ -57,14 +57,19 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this.slug = this.route.snapshot.paramMap.get('slug') || '';
-    const found = this.coursesData.find(c => c.slug === this.slug);
-    if (!found) { this.router.navigate(['/courses']); return; }
-    this.course = found;
-    this.seo.updateMeta({ title: this.course.seoTitle, description: this.course.seoDescription });
+    this.route.paramMap.subscribe(params => {
+      this.slug = params.get('slug') || '';
+      const found = this.coursesData.find(c => c.slug === this.slug);
+      if (!found) {
+        this.router.navigate(['/courses']);
+        return;
+      }
+      this.course = found;
+      this.seo.updateMeta({ title: this.course.seoTitle, description: this.course.seoDescription });
 
-    const countryKeys = this.courseCountryMap[this.slug] || [];
-    this.relatedDestinations = countryKeys.map(k => DESTINATIONS.find(d => d.slug === k)!).filter(Boolean).slice(0, 4);
+      const countryKeys = this.courseCountryMap[this.slug] || [];
+      this.relatedDestinations = countryKeys.map(k => DESTINATIONS.find(d => d.slug === k)!).filter(Boolean).slice(0, 4);
+    });
   }
 
   ngAfterViewInit(): void { this.scrollReveal.observeAll(this.el.nativeElement); }
