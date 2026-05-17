@@ -3,7 +3,7 @@
 // ===== HERO =====
 .dest-hero {
   position: relative; min-height: 440px; display: flex; align-items: center;
-  background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop') center / cover no-repeat;
+  background: url('/assets/images/destinations/hero.jpg') center / cover no-repeat;
   &__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba($color-primary-dark, 0.88) 0%, rgba($color-primary, 0.75) 100%); }
   &__container { position: relative; z-index: 1; max-width: $container-max; margin: 0 auto; padding: $space-10 $container-padding; }
   &__badge {
