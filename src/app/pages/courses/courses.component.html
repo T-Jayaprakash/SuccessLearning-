@@ -27,22 +27,20 @@
     <div class="courses-list__grid">
       <a *ngFor="let course of filteredCourses; let i = index"
          [routerLink]="'/courses/' + course.slug"
-         class="cl-card scroll-reveal stagger-{{i+1}}"
-         [id]="'cl-card-' + course.slug">
-        <div class="cl-card__image">
+         class="course-card-premium scroll-reveal stagger-{{i+1}}"
+         [id]="'course-card-' + course.slug">
+        <div class="course-card-premium__bg">
           <img [src]="course.image" [alt]="course.name" loading="lazy">
+          <div class="course-card-premium__overlay"></div>
         </div>
-        <div class="cl-card__body">
-          <div class="cl-card__meta">
-            <span class="cl-card__duration"><i class="bi bi-clock"></i> {{ course.duration }}</span>
-            <span class="cl-card__mode"><i class="bi bi-laptop"></i> {{ course.mode }}</span>
+        <div class="course-card-premium__content">
+          <h3 class="course-card-premium__name">{{ course.name }}</h3>
+          <p class="course-card-premium__desc">{{ course.description }}</p>
+          <div class="course-card-premium__footer">
+            <span class="course-card-premium__link" [style.color]="course.color">
+              View Details <i class="bi bi-arrow-right"></i>
+            </span>
           </div>
-          <h3 class="cl-card__name">{{ course.name }}</h3>
-          <p class="cl-card__desc">{{ course.description }}</p>
-          <div class="cl-card__highlights">
-            <span *ngFor="let h of course.highlights" class="cl-card__tag">{{ h }}</span>
-          </div>
-          <span class="cl-card__link" [style.color]="course.color">View Details <i class="bi bi-arrow-right"></i></span>
         </div>
       </a>
     </div>

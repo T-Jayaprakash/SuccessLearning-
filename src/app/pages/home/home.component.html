@@ -60,17 +60,20 @@
     <div class="courses-section__grid">
       <a *ngFor="let course of courses; let i = index"
          [routerLink]="'/courses/' + course.slug"
-         class="course-card scroll-reveal stagger-{{i + 1}}"
+         class="course-card-premium scroll-reveal stagger-{{i + 1}}"
          [id]="'course-card-' + course.slug">
-        <div class="course-card__image">
+        <div class="course-card-premium__bg">
           <img [src]="course.image" [alt]="course.name" loading="lazy">
+          <div class="course-card-premium__overlay"></div>
         </div>
-        <div class="course-card__body">
-          <h3 class="course-card__name">{{ course.name }}</h3>
-          <p class="course-card__desc">{{ course.description }}</p>
-          <span class="course-card__link" [style.color]="course.color">
-            Learn More <i class="bi bi-arrow-right"></i>
-          </span>
+        <div class="course-card-premium__content">
+          <h3 class="course-card-premium__name">{{ course.name }}</h3>
+          <p class="course-card-premium__desc">{{ course.description }}</p>
+          <div class="course-card-premium__footer">
+            <span class="course-card-premium__link" [style.color]="course.color">
+              Learn More <i class="bi bi-arrow-right"></i>
+            </span>
+          </div>
         </div>
       </a>
     </div>
@@ -158,44 +161,34 @@
   </div>
 </section>
 
-<!-- ========== TESTIMONIALS ========== -->
+<!-- ========== TESTIMONIALS (Google Review Style) ========== -->
 <section class="section section-alt testimonials" id="testimonials-section">
   <div class="testimonials__container">
     <div class="testimonials__header scroll-reveal">
-      <span class="section-label">Student Voices</span>
+      <span class="section-label">Real Google Reviews</span>
       <h2 class="section-title">What Our Students Say</h2>
       <div class="gold-line-center"></div>
     </div>
-    <div class="testimonials__slider scroll-reveal">
-      <div class="testimonials__card">
-        <div class="testimonials__stars">
-          <i *ngFor="let s of getStars(testimonials[currentTestimonial].rating)" class="bi bi-star-fill"></i>
-        </div>
-        <p class="testimonials__text">"{{ testimonials[currentTestimonial].text }}"</p>
-        <div class="testimonials__author">
-          <div class="testimonials__avatar">{{ getInitials(testimonials[currentTestimonial].name) }}</div>
-          <div>
-            <strong class="testimonials__name">{{ testimonials[currentTestimonial].name }}</strong>
-            <span class="testimonials__role">{{ testimonials[currentTestimonial].designation }}</span>
-            <span *ngIf="testimonials[currentTestimonial].score" class="testimonials__score">
-              {{ testimonials[currentTestimonial].course }} · {{ testimonials[currentTestimonial].score }}
-            </span>
+    <div class="google-reviews-grid scroll-reveal">
+      <div *ngFor="let t of testimonials; let i = index" class="google-review-card stagger-{{i + 1}}">
+        <div class="google-review-card__header">
+          <div class="google-review-card__avatar" [ngStyle]="{'background-color': t.color}">{{ getInitials(t.name) }}</div>
+          <div class="google-review-card__meta">
+            <strong class="google-review-card__name">{{ t.name }}</strong>
+            <div class="google-review-card__rating">
+              <i *ngFor="let s of getStars(t.rating)" class="bi bi-star-fill text-warning"></i>
+              <span class="google-review-card__date">{{ t.time }}</span>
+            </div>
           </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-review-card__icon" width="20" height="20">
         </div>
+        <p class="google-review-card__text">"{{ t.text }}"</p>
       </div>
-      <div class="testimonials__nav">
-        <button (click)="prevTestimonial()" class="testimonials__nav-btn" aria-label="Previous testimonial" id="testimonial-prev">
-          <i class="bi bi-chevron-left"></i>
-        </button>
-        <div class="testimonials__dots">
-          <span *ngFor="let t of testimonials; let i = index"
-                class="testimonials__dot" [class.active]="i === currentTestimonial"
-                (click)="currentTestimonial = i"></span>
-        </div>
-        <button (click)="nextTestimonial()" class="testimonials__nav-btn" aria-label="Next testimonial" id="testimonial-next">
-          <i class="bi bi-chevron-right"></i>
-        </button>
-      </div>
+    </div>
+    <div class="testimonials__action text-center mt-5 scroll-reveal">
+      <a href="https://www.google.com/search?q=success+learning+trichy" target="_blank" class="btn-outline">
+        View More on Google <i class="bi bi-box-arrow-up-right"></i>
+      </a>
     </div>
   </div>
 </section>

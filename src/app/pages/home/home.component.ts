@@ -13,11 +13,10 @@ interface Course {
 
 interface Testimonial {
   name: string;
-  course: string;
-  score: string;
+  time: string;
   rating: number;
   text: string;
-  designation: string;
+  color: string;
 }
 
 @Component({
@@ -57,10 +56,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ];
 
   testimonials: Testimonial[] = [
-    { name: 'Priya Ramanathan', course: 'IELTS', score: 'Band 7.5', rating: 5, text: 'I joined Success Learning for IELTS preparation and it was the best decision. The trainers focused on my weak areas — especially writing. I improved from Band 6 to 7.5 in just 6 weeks.', designation: 'MS Aspirant' },
-    { name: 'Karthik Sundaram', course: 'GRE', score: '318/340', rating: 5, text: 'The GRE coaching is very structured. The vocabulary building approach and quant strategies helped me score 318. The small batch size meant I got personal attention whenever I was stuck.', designation: 'Software Engineer' },
-    { name: 'Meera Lakshmi', course: 'Spoken English', score: '', rating: 5, text: 'I was very hesitant to speak English in professional settings. After 2 months at Success Learning, I can now confidently present in meetings and handle interviews.', designation: 'Working Professional' },
-    { name: 'Aravind Kumar', course: 'German A2', score: 'Goethe A2 Certified', rating: 5, text: 'The German classes here are very well-structured. The teacher made grammar easy to understand and the conversational practice sessions were very helpful.', designation: 'Engineering Student' },
+    { name: 'SUDHAKARAN Karan sudha', time: '2 years ago', rating: 5, text: 'Hi, I am SUDHAKARAN, First of all thank you so much, sir and Sheril mam also Monisha mam, UK VI test it was great experience for me. My qualification 12th Tamil medium. GRAMMAR is very useful, UK VI in this classes very useful, success learning. December month going to UK. Thank you, SUCCESS LEARNING.', color: '#00897B' },
+    { name: 'Janet ofiliya .V', time: 'a year ago', rating: 5, text: 'I came here for the preparation of my IELTS exam... Here they have good environment to prepare and staffs working here are too polite, they are explaining each and everything with some tips and tricks to crack the exam and I think it is a good place to prepare. Thank you success learning', color: '#8E24AA' },
+    { name: 'Raja Ram', time: 'a year ago', rating: 5, text: 'Hi Iam Ram , First of all thank you so much for Mr, Mydeen sir, Mr, Ramesh sir and Sheril mam, I would like to thank you again, for your efforts in creating a positive and supportive learning environment.', color: '#E53935' },
+    { name: 'Kabi Kabilesh', time: 'a year ago', rating: 5, text: 'This is the best institute for IELTS coaching in Trichy. The staff are very friendly and they guide you through every module with great patience. Highly recommended!', color: '#3949AB' }
   ];
 
   currentTestimonial = 0;
@@ -83,10 +82,37 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.seo.updateMeta({
-      title: 'Success Learning — Expert Language & Exam Coaching in Trichy',
-      description: 'Success Learning is Trichy\'s trusted coaching centre for IELTS, TOEFL, GRE, GMAT, Spoken English, German, French & Japanese. Expert trainers, small batches, flexible timings. Thillai Nagar, Trichy.',
-      keywords: 'IELTS coaching Trichy, TOEFL Trichy, GRE Trichy, GMAT Trichy, spoken English Trichy, German classes Trichy, Success Learning',
+      title: 'Success Learning — Top IELTS, TOEFL, GRE Coaching in Trichy',
+      description: 'Success Learning is Trichy\'s premier language training institute. Expert coaching for IELTS, TOEFL, GRE, GMAT, Spoken English, German & French with verified google reviews.',
+      keywords: 'best IELTS coaching Trichy, TOEFL training Trichy, GRE coaching center Trichy, GMAT preparation, spoken English classes Trichy, study abroad consultancy Trichy, Success Learning',
     });
+    this.injectStructuredData();
+  }
+
+  private injectStructuredData(): void {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Success Learning",
+      "url": "https://successlearning.in",
+      "logo": "https://successlearning.in/assets/images/sl-head-logo.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Thillai Nagar",
+        "addressLocality": "Trichy",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "IN"
+      },
+      "telephone": "+919840979292",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "22"
+      }
+    });
+    document.head.appendChild(script);
   }
 
   ngAfterViewInit(): void {

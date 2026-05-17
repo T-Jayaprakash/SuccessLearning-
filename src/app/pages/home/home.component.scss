@@ -135,40 +135,43 @@
   }
 }
 
-.course-card {
-  background: $color-white; border: 1px solid $color-border; border-radius: $radius-lg;
-  overflow: hidden; text-decoration: none; display: flex; flex-direction: column;
-  transition: all $transition-base;
-
+.course-card-premium {
+  position: relative; border-radius: $radius-xl; overflow: hidden; display: flex; flex-direction: column;
+  aspect-ratio: 4/5; text-decoration: none; box-shadow: $shadow-md; transition: all 0.4s ease;
+  
   &:hover {
-    border-color: transparent; box-shadow: $shadow-card-hover; transform: translateY(-4px);
-    .course-card__link { gap: $space-2; }
-    .course-card__image img { transform: scale(1.06); }
+    transform: translateY(-8px); box-shadow: $shadow-xl;
+    .course-card-premium__bg img { transform: scale(1.1); }
+    .course-card-premium__overlay { background: linear-gradient(180deg, rgba(10,37,64,0.1) 0%, rgba(10,37,64,0.95) 100%); }
+    .course-card-premium__link { gap: $space-3; }
   }
 
-  &__image {
-    width: 100%; aspect-ratio: 16/9; overflow: hidden;
-    img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  &__bg {
+    position: absolute; inset: 0; z-index: 1;
+    img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   }
 
-  &__body {
-    padding: $space-5; display: flex; flex-direction: column; flex: 1;
+  &__overlay {
+    position: absolute; inset: 0; z-index: 2; transition: background 0.4s ease;
+    background: linear-gradient(180deg, rgba(10,37,64,0) 0%, rgba(10,37,64,0.85) 100%);
   }
 
-  &__name {
-    font-family: $font-primary; font-size: $font-size-lg; font-weight: $font-weight-semibold;
-    color: $color-text-dark; margin-bottom: $space-2;
+  &__content {
+    position: relative; z-index: 3; display: flex; flex-direction: column; justify-content: flex-end;
+    height: 100%; padding: $space-5; color: $color-white;
   }
 
-  &__desc {
-    font-size: $font-size-sm; color: $color-text-light; line-height: $line-height-base;
-    margin-bottom: $space-4; flex: 1;
+  &__name { font-family: $font-primary; font-size: $font-size-xl; font-weight: $font-weight-bold; margin-bottom: $space-2; color: $color-white; }
+  &__desc { font-size: $font-size-sm; color: rgba(255,255,255,0.85); line-height: $line-height-base; margin-bottom: $space-4; }
+  
+  &__footer {
+    padding-top: $space-3; border-top: 1px solid rgba(255,255,255,0.2);
   }
-
+  
   &__link {
-    display: inline-flex; align-items: center; gap: $space-1;
-    font-family: $font-primary; font-size: $font-size-sm; font-weight: $font-weight-semibold;
-    transition: all $transition-base;
+    display: inline-flex; align-items: center; gap: $space-2;
+    font-family: $font-primary; font-size: $font-size-sm; font-weight: $font-weight-bold;
+    transition: all $transition-base; text-transform: uppercase; letter-spacing: 0.5px;
   }
 }
 
@@ -278,49 +281,40 @@
   &__container { max-width: $container-max; margin: 0 auto; padding: 0 $container-padding; }
   &__header { text-align: center; margin-bottom: $space-8; }
 
-  &__slider { max-width: 680px; margin: 0 auto; }
-
-  &__card {
-    background: $color-white; border-radius: $radius-xl; padding: $space-7; box-shadow: $shadow-md;
-    text-align: center;
+.google-reviews-grid {
+    display: grid; grid-template-columns: 1fr; gap: $space-4; margin: 0 auto; max-width: 1100px;
+    @media (min-width: $bp-sm) { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: $bp-lg) { grid-template-columns: repeat(4, 1fr); }
   }
 
-  &__stars { margin-bottom: $space-4; i { color: $color-google-star; font-size: 20px; margin: 0 2px; } }
+  .google-review-card {
+    background: $color-white; border: 1px solid $color-border; border-radius: $radius-lg;
+    padding: $space-4; box-shadow: $shadow-sm; display: flex; flex-direction: column;
+    transition: all $transition-base;
+    &:hover { box-shadow: $shadow-card-hover; transform: translateY(-3px); }
 
-  &__text {
-    font-family: $font-secondary; font-size: $font-size-md; color: $color-text;
-    line-height: $line-height-relaxed; font-style: italic; margin-bottom: $space-6;
-  }
+    &__header { display: flex; align-items: center; gap: $space-3; margin-bottom: $space-3; position: relative; }
+    
+    &__avatar {
+      width: 40px; height: 40px; border-radius: $radius-full; font-size: 14px; color: $color-white;
+      display: flex; align-items: center; justify-content: center; font-family: $font-primary; font-weight: $font-weight-bold; flex-shrink: 0;
+    }
 
-  &__author { display: flex; align-items: center; gap: $space-3; justify-content: center; }
-
-  &__avatar {
-    width: 48px; height: 48px; border-radius: $radius-full; font-size: $font-size-sm;
-    background: linear-gradient(135deg, $color-primary, $color-primary-light);
-    color: $color-white; display: flex; align-items: center; justify-content: center;
-    font-family: $font-primary; font-weight: $font-weight-semibold;
-  }
-
-  &__name { display: block; font-family: $font-primary; font-size: $font-size-sm; font-weight: $font-weight-semibold; color: $color-text-dark; }
-  &__role { display: block; font-size: $font-size-xs; color: $color-text-light; }
-  &__score { display: block; font-size: $font-size-xs; color: $color-accent; font-weight: $font-weight-medium; }
-
-  &__nav {
-    display: flex; align-items: center; justify-content: center; gap: $space-4; margin-top: $space-6;
-  }
-
-  &__nav-btn {
-    width: 40px; height: 40px; border-radius: $radius-full; border: 1px solid $color-border;
-    background: $color-white; display: flex; align-items: center; justify-content: center;
-    cursor: pointer; transition: all $transition-fast; color: $color-text;
-    &:hover { border-color: $color-primary; color: $color-primary; background: $color-bg; }
-  }
-
-  &__dots { display: flex; gap: $space-2; }
-  &__dot {
-    width: 8px; height: 8px; border-radius: $radius-full; background: $color-border;
-    cursor: pointer; transition: all $transition-fast;
-    &.active { background: $color-accent; width: 24px; }
+    &__meta { display: flex; flex-direction: column; }
+    &__name { font-family: $font-primary; font-size: 14px; font-weight: $font-weight-semibold; color: $color-text-dark; }
+    
+    &__rating { display: flex; align-items: center; gap: 2px;
+      i { font-size: 11px; }
+    }
+    
+    &__date { font-size: 12px; color: $color-text-light; margin-left: $space-2; }
+    
+    &__icon { position: absolute; top: 0; right: 0; }
+    
+    &__text {
+      font-size: 13px; color: $color-text; line-height: $line-height-base; margin: 0; flex: 1;
+      display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;
+    }
   }
 }
 
