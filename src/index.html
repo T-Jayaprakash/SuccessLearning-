@@ -13,16 +13,29 @@
   <meta property="og:description" content="Expert coaching for IELTS, TOEFL, GRE, GMAT, Spoken English, German, French & Japanese in Thillai Nagar, Trichy.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
-  <link rel="canonical" href="https://successlearning.in/">
+  <meta property="og:url" content="https://www.successlearning.in/">
+  <link rel="canonical" href="https://www.successlearning.in/">
   <link rel="icon" type="image/x-icon" href="./assets/images/sl-logo-1.jpg">
 
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <!-- Third-party CSS is loaded without blocking first paint: the browser fetches
+       it at low priority and switches it to a real stylesheet once it arrives. -->
   <!-- Google Fonts: Poppins + Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
   <!-- Bootstrap Icons only (no Bootstrap CSS framework) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="preload" as="style"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  </noscript>
 
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -31,7 +44,7 @@
     "@type": "EducationalOrganization",
     "name": "Success Learning",
     "description": "Trusted language and international exam coaching centre in Trichy, Tamil Nadu",
-    "url": "https://successlearning.in",
+    "url": "https://www.successlearning.in",
     "telephone": "+919840979292",
     "address": {
       "@type": "PostalAddress",
