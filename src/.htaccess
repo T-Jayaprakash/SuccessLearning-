@@ -16,8 +16,11 @@
   # on disk. Without this the server answers 404. Anything that is not an
   # existing file or directory is served index.html with a 200 status, and the
   # Angular router then renders the right page.
+  # A missing asset still gets a real 404 — serving index.html for a broken
+  # image or script would hide the problem behind a 200.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.(js|mjs|css|map|json|xml|txt|jpe?g|png|gif|webp|avif|svg|ico|woff2?|ttf|eot|pdf|mp4|webm)$ [NC]
   RewriteRule ^ /index.html [L]
 </IfModule>
 
