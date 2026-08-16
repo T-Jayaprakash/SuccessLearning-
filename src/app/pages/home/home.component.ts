@@ -96,8 +96,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
       "name": "Success Learning",
-      "url": "https://successlearning.in",
-      "logo": "https://successlearning.in/assets/images/sl-head-logo.jpg",
+      "url": "https://www.successlearning.in",
+      "logo": "https://www.successlearning.in/assets/images/sl-head-logo.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Thillai Nagar",

@@ -1,0 +1,8 @@
+# robots.txt for https://www.successlearning.in/
+# Standard, open crawl policy — every crawler (search engines, SEO tools and
+# AI assistants) is allowed to fetch the whole site.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.successlearning.in/sitemap.xml
